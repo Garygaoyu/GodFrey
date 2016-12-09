@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+ <link href="../css/floatmenu.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="../img/millennium-park.jpg"></div>
+					<div class="data">
+						<h4>Millenium &nbsp;Park&nbsp;-&nbsp;千禧公园公园</h4>
+						
+				  </div>
+
+			  </div>
+            <div class="slideshow_item">
+					<div class="image"><img src="../img/WTMounment.jpg"></div>
+					<div class="data">
+						<h4>美国华府的地标</h4><h4 style="margin-top:-8px;">Washington&nbsp;Monument&nbsp;&nbsp;华盛顿纪念碑</h4>
+						
+				  </div>
+
+			  </div>
+           <div class="slideshow_item">
+					<div class="image"><img src="img/Falls.jpg" width="960" height="500" alt=""/></div>
+					<div class="data">
+						<h4>气势磅礴的尼加拉瓜大瀑布</h4>
+						
+				  </div></div>
+                  
+            <div class="slideshow_item">
+					<div class="image"><img src="../img/capitol_building.jpg"></div>
+					<div class="data">
+						<h4>United&nbsp;States&nbsp;Capitol&nbsp;-&nbsp;美国国会大厦</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Lincoln_Memorial.jpg"></div>
+					<div class="data">
+						<h4>Lincoln&nbsp; Memorial&nbsp;-&nbsp;林肯纪念堂</h4>
+						
+				  </div>
+
+				</div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>8天团</h1><h1> （美东+芝加哥 [纽约市-尼加拉瓜大瀑布</h1><h1>-克里夫兰-芝加哥-底特律-匹兹堡-华盛顿-巴尔的摩-费城]豪华游）</h1>
+<k>第一天：出发地-纽约市（送半日游+购物）-夜游 </k><p>
+原居地飞往纽约市，免费加送特色市区游，不浪费宝贵时间。深入游览市民生活区-法拉盛唐人街(小台北和韩国城)，了解纽约移民的生活状况。并选购高性价比的手信礼品，包括花旗参，美国果仁特产，保健品，Zippo打火机，名牌香水，化妆品，手表，饰品等，还有名牌折扣商场，电子产品大卖场, 梅西,Best buy等百货商场。并在食街享受地道各国风味美食，下午送往酒店休息。EWR离酒店较近，接机后回酒店休息，没有特色游，可以自费（$10/人）到Jersey Gardens Outlet Mall购物。5PM前到达，晚上自费夜游$25/人( 不含门票)。</p>
+<k>第二天：纽约市观光 </k><p>
+上到纽约市地标-帝国大厦嘹望观景台，欣赏中央公园和纽约。乘坐观光环岛游轮游览哈德逊河，与自由女神像和布鲁克林桥摄影留念。登上花费1.2亿美元重新整修开放的国家历史文物-大无畏号航空母舰，并参观协和号超音速客机和各种战机。漫步世界金融、証券交易中心华尔街，三一教堂，象征牛市的铜牛雕塑和纽约股票交易所留影。参观大都会博物馆，时代广场，杜莎夫人蜡像馆与总统奥巴马等名人合影。途径第五大道，洛克菲勒中心，联合国总部，世贸遗址和建设中的新世贸-自由之塔等。</p>
+<k>第三天：纽约市-尼加拉瓜大瀑布</k><p>
+参观尼加拉瓜大瀑布，游览瀑布国家公园，眺望「美国瀑布」，「马蹄瀑布」及「新娘面纱瀑布」。水势一泻千里，雷霆万钧，亲身体验那份磅礡的气势，尤如万马奔腾。搭乘着名的”雾中少女”号游船（冬季关闭）穿梭于波涛起伏的瀑布间，水花迎面扑来，刺激紧张，更添加一份震撼力。回到访客中心观看Imax电影，投资1千五百万的电影向您描述了尼加拉瀑布多姿多彩的传奇故事。结束后。A.继续在尼加拉瓜市，瀑布公园和瀑布赌场自由活动，直到回酒店。B.自费深度游（$25/人）,参观水力发电站，瀑布古堡（费用已含$13古堡门票），安大略湖，远观多伦多。</p>
+<k>第四天：克里夫兰-芝加哥</k><p>
+世界摇滚之都-克利夫兰，也是俄亥俄州伊利湖边最大的城市。参观全美知名的摇滚乐名人堂博物馆，博物馆由着名建筑设计师贝聿铭设计。他是全球第一个以摇滚音乐的博物馆。也是全球摇滚乐迷朝圣的殿堂。随后参观阿姆斯壮太空博物馆，了解第一个登月人的点点滴滴和登月知识。下午乘坐Goodtime轮船游览伊利湖，饱览克里夫兰风光。傍晚回到芝加哥。</p>
+<k>第五天：芝加哥市区游-夜游</k><p>
+路过公牛队主场时，可在此缅怀“公牛王朝”奇迹。参观格兰特公园的白金汉喷泉。参观举世闻名的「千禧公园」，“云之门”雕塑。登上北美第一高楼--西尔斯大厦。鸟览芝加哥。芝加哥游船观光，欣赏到芝加哥最着名的建筑，领略芝加哥的建筑艺术。着名的海军码头。参观水塔和有“美妙一英里”之称的密西根豪华商业区。您可以选择在这里购买您心仪的礼物。晚上，自费夜游（$25/人）</p>
+
+<k>第六天：芝加哥-底特律</k><p>
+早上前往底特律，参观福特汽车博物馆.占地9英亩,展品反映福特汽车对美国运输业历史演变，世界上有汽车奔驰的地方充就有福特.观赏福特车厂最早期的古董老爷车、甘迺迪总统座驾、美国工业发明家如爱迪生等人的作品及米高积臣唱片公司展览等。内容丰富精采，令您大开眼界。</p>
+<k>第七天：匹兹堡-华盛顿</k><p>
+早上参观钢铁之都-匹兹堡。游览MtWashington和Point State Park，位于市中心的三条河流交汇的三角形区域，饱览匹兹堡城市美景。华盛顿特区，参观林肯纪念堂和倒影湖，越战纪念碑，朝鲜战争纪念碑,在航天航空博物馆了解人类，征服天空和太空的伟大历程和对未来的展望。并与美国总统府-白宫和最高权力机构-国会大厦分别合影留念，乘坐游船沿着波多马克河和太斗湖饱览首都美景。途经杰弗逊总统纪念堂，华盛顿纪念碑，二战纪念碑，美国印钞厂等。</p>
+<k>第八天：巴尔的摩-费城-送机</k><p>
+前往巴尔的摩，有着不朽城市之称,它是美国国歌的诞生地。参观明珠海港，拍照留念。中午前往国家诞生地“费城”，漫步在独立公园，在想象中感受1776年在此宣读独立宣言时的振奋心情。与美国国父-华盛顿雕像，旧国会大厦和独立宫合影留念，参观自由钟或者自由活动。免费送纽约三大机场7:00PM后航班。自费前往费城机场2:00PM后航班。</p>
+
+
+
+
+
+
+</div>
+</body>
+</html>

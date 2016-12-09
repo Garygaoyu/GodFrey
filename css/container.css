@@ -1,0 +1,93 @@
+@import url("FZZXHJW_GB1_0/stylesheet.css");
+
+
+
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+section, header{
+	display: block;
+}
+
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	height: 100%;
+	position: relative;
+    margin-top:600px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.clr{
+	clear: both;
+}
+.container > header{
+	background-size: constrain;
+	background-attachment: scroll;
+	font-family: "FZZXHJW GB1 0";
+	padding: 20px 30px 20px 30px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-align: center;
+	background-image: url(../img/LOGO_watermark-.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.container > header h11{
+	letter-spacing: 2px;
+	color: #666;
+	font-weight: 700;
+	font-size: 33px;
+	padding: 70px 0px 5px 0px;
+	background-image: url(../img/heading_under.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.container > header h1 span{
+	
+	font-size: 22px;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: left;
+	padding-top: 20px;
+	line-height: 31px;
+	display: block;
+	color:#666;
+	
+	
+}
+.container > header h1 a{
+	font-family: "FZZXHJW GB1 0";
+	text-decoration: none;
+	font-size: 24px;
+	color: black;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+	}
+.container > header h1 a:hover{
+	text-decoration: none;
+	color:#33C;
+	transition: color 0.5s ease;	
+	font-size: 24px;
+}
+.container > header h2{
+	font-size: 16px;
+	color: #2d6277;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}

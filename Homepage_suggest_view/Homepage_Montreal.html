@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Montreal-building.jpg"></div>
+					<div class="data">
+						<h4>Montreal街区</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Montreal_underground.jpg"></div>
+					<div class="data">
+						<h4>Montreal地下城</h4>
+						
+				  </div>
+
+				</div>
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Montreal_church.jpg"></div>
+					<div class="data">
+						<h4>圣若瑟圣堂&nbsp;-&nbsp;罗马天主教宗座圣殿</h4>
+					</div>
+		  </div>
+
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Parc d'Olympique.jpg"></div>
+					<div class="data">
+						<h4>奥林匹克公园</h4>
+						
+					</div>
+				</div>
+				
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>蒙特利尔</h1>
+<p>Montréal 蒙特利尔是一座位于加拿大魁北克西南部的城市，主要位于圣劳伦斯河中的蒙特利尔岛及周边小岛上。 “蒙特利尔”一词来源于中古法语“Mont Réal”，意思为“皇家山”，至今蒙特利尔城中心的地标皇家山仍以此命名。法语是蒙特利尔的官方语言，也是城市里最常用的语言，使用人口占城市总人口的60.5%，使得蒙特利尔成为世界上仅次于巴黎的第二大法语城市。蒙特利尔被认为是世界最佳宜居城市，并被联合国教育、科学及文化组织认定为设计之城。</p>
+<h3>主要景点：</h3>
+<k>La ville souterraine</k><p> 蒙特利尔的地下城指市中心附近地下的综合性住宅商业中心。也被称为室内的城市，因为并非所有的部分都在地下。地下城由32多公里长，占地12平方公里的地道构成，包括有市中心80%的办公室和35%商业面积。服务包括购物中心，旅馆，办公，银行，博物馆，七个地铁站，两个火车站，一个长途汽车终点站和一个贝尔中心。地下城有120多个出口，迎送50多万进出人流，是躲避严峻的寒冬和繁忙的交通的理想去处。由于地下城的原因，蒙特利尔常被称为“二城合一”。</p>
+<k>Saint Joseph's Oratory of Mount Royal</k><p> 圣若瑟圣堂是一座罗马天主教宗座圣殿，这座圣堂的穹顶是世界第三大，这座宗座圣殿供奉圣若瑟，安德列报告许多奇迹，多数与治疗疾病有关，许多残疾人，盲人，病人前来朝圣，甚至包括新教徒。圣堂内有一面墙展示了据称在此治愈的数千人的拐杖。教宗若望保禄二世相信这些奇迹是真实的，在1982年将安德列列入真福品。安德列的心脏保存在教堂博物馆内。每年有200多万游客和朝圣者访问圣若瑟圣堂。2005年，圣若瑟圣堂列为加拿大历史古迹</p>
+<k>Parc d'Olympique</k> <p>奥林匹克公园</p>
+
+</div>>
+</body>
+</html>

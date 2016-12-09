@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../Vancouver package/Vancouver 1 day/caplino.jpg"></div>
+					<div class="data">
+						<h4>CAPILANO&nbsp;SUSPENSION 悬空吊桥</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../Vancouver package/Vancouver 1 day/Gastown.jpg"></div>
+					<div class="data">
+						<h4>夜晚灯火灿烂的煤气镇</h4>
+						
+				  </div>
+
+				</div>
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../Vancouver package/Vancouver 1 day/GranvilleIsland.jpg"></div>
+					<div class="data">
+						<h4>Granville岛</h4>
+					</div>
+		  </div>
+
+                <div class="slideshow_item">
+					<div class="image"><img src="../Vancouver package/Vancouver 1 day/stanleypark_.jpg"></div>
+					<div class="data">
+						<h4>斯坦利公园</h4>
+						
+					</div>
+				</div>
+				
+		
+
+		</div>
+		
+		
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>温哥华 </h1>
+<p>Vancouver 温哥华是不列颠哥伦比亚省以至加拿大西部最大的都会区。温哥华气候温和，四季宜人，市内草地常绿、繁花似锦，有许多城市公园，其中史丹利公园面积404.9公顷1.001英亩）为北美中最大城市公园之一。温哥华近年经常在各项世界最佳居住城市的调查中名列前茅。温哥华亦曾于2010年举办冬季奥运会和冬季残运会。</p>
+<h3>主要景点：</h3>
+<k>Chinatown</k><p> 北美第二大唐人街--2011年被评为加拿大历史古迹，参观中山公园的明代建筑及罕有的黑竹树。还可以参观附近的千禧门，世界最窄的大厦--森记大厦。</p>
+<k>Gastown</k><p> 煤气镇--温哥华市的经济发源地，地球上第一个蒸汽钟是该地的标志，它定时发出美妙的钟声，游客还可以在这里选购温哥华特色的纪念品。</p>
+<k>Canada&nbsp; Place</k><p> 加拿大广场--1986年世界博览会加拿大的主场馆，现在是温哥华港口的地标，既是巨型油轮的码头又是会议中心更是五星级的酒店。还可以通过FLY&nbsp;OVER&nbsp;CANADA不同视觉去体验不同的温哥华和加拿大景观。</p>
+<k>Canada&nbsp; Winter&nbsp; Olympic&nbsp; Park</k><p>--加拿大冬奥纪念公园。</p>
+<k>Stanley&nbsp; Park</k><p> 占地1000英亩的史丹利公园是温哥华市的园林绿洲，图腾公园，海堤南岸是拍摄温哥华市的最佳景点。</p>
+<k>Capilano&nbsp; Suspension&nbsp; Bridge</k><p> 高踞在70公尺的河面上，走在桥上可欣赏悬崖上的青松柏翠的百年古树，还可以漫步于CLIFF WALK 空中走廊上挑战自己的胆量。</p>
+<k>Granville&nbsp; Island</k><p> 岛上有40多家艺术工作坊，各式的精品店，还有5万多平方尺的公众市场售卖各种不国家的美食。</p>
+<k>Queen&nbsp; Park</k><p> 女皇公园，坐落于152公尺的小山丘上，可以俯览温哥华市的景色也可以远眺北温群山，每年春天百花吐艳，令人心旷神怡。</p>
+
+
+</div>>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="img/GolfCourt.jpg" width="1280" height="651" alt=""/></div>
+					<div class="data">
+						<h4>清晨的湖中高尔夫球场</h4>
+						
+
+				  </div>
+			  </div>
+              <div class="slideshow_item">
+					<div class="image"><img src="img/MosesLake.jpg" width="1024" height="768" alt=""/></div>
+					<div class="data">
+						<h4>夕阳下的摩西湖</h4>
+					</div>
+		  </div>
+              <div class="slideshow_item">
+					<div class="image"><img src="img/YR.jpg" width="638" height="300" alt=""/></div>
+					<div class="data">
+						<h4>黄石公园&nbsp;-&nbsp;温泉</h4>
+					</div>
+		  </div>
+          <div class="slideshow_item">
+					<div class="image"><img src="img/YR1.jpg" width="638" height="300" alt=""/></div>
+					<div class="data">
+						<h4>黄石公园</h4>
+					</div>
+		  </div>
+				
+			
+				<div class="slideshow_item">
+					<div class="image"><img src="img/DryFall.jpg" width="1024" height="683" alt=""/></div>
+					<div class="data">
+						<h4>世界最大瀑布遗址&nbsp;-&nbsp;Dry&nbsp;Falls</h4>
+						
+
+				  </div>
+		  </div>
+								
+				
+				
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>5天团（美国黄石公园）</h1>
+<k>第一天:温哥华~西雅图~北岸工厂直销中心~摩西湖~士布坚市</k><p>
+是日于指定地点齐集后出发,途经华盛顿洲最大商业成市西雅图,于中午时份抵达北岸工厂直销中心.午膳及稍作停留购物后前往摩西湖.</p>
+<k>第二天:士布坚市~歌特龄湖~麦苏娜市~比特市~布仕民</k><p>
+早上离开士布坚市,途经山明水秀之歌特龄湖,团友可漫步于全球最长的行人浮桥更可一睹世上唯一的湖中高尔夫球场.午膳及购物于免销售税之蒙坦尼州商场,途经以出产铜矿着名的比特镇时可看见座落于山上的洛几山女神像.</p>
+<k>第三天:黄石公园重点游 </k><p>
+黄石公园位于怀俄明洲,座落在溶岩高原上占地8,992 平方公里,从北拱门进入黄石公园,先游览玛脉温泉区的彩色石灰台阶,陶瓷盘地是最热及最古老的温泉区就像一大片彩色陶瓷.午膳于黄石峡谷村,设有旅游资料中心及礼品店,气象万千及色彩独特的黄石大峡谷,艺术家角更是拍摄黄石大峡谷的最佳景点.泥浆火山区内沸腾的泥沼含极高酸性,有发声的龙口泉、浩瀚而秀丽的黄石湖(224 平方公里)是北美海拔最高的山中湖.位于黄石湖边的西母指温泉区有多个大小不同各具特色的温泉.老忠实喷泉从不令观众失望,三百多年来准时喷发.大耀泉是黄石公园内最大的温泉,被描绘成〝沸腾的湖〞.</p>
+<k>第四天:宝芝门~麦苏娜市~士布坚市 </k><p>
+早上沿公路西行,午间经麦苏娜市( Missoula),抵达游客必到的〝五万个银元〞特色赌场礼品店,选购特色礼品.黄昏时到达曾举办1974 年世界博览会之士布坚市并参观现已成为公园之博览会场地.</p>
+<k>第五天:士布坚~旧冰河瀑布~温哥华 </k><p>
+是日离开士布坚市,前往参观冰河时期遗留至今-世界上最大之瀑布遗址Dry Falls,但见幽谷流水,美不胜收.午膳于充满欧陆色彩之利文物镇(Leavenworth),镇内大街小巷,所有商店餐厅酒店等建筑物,都保持有浓厚德国巴伐利传统风格,别有一番风味.团友更可自费品尝地道之德国名菜〝烤猪手〞及啤酒.午膳后启程返回温哥华,并于边境稍停免税店,购买烟酒等免税品,旅程至此圆满结束。</p>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

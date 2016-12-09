@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="Canada east_5-6/Castle Toronto.jpg"></div>
+					<div class="data">
+						<h4>卡萨罗马城堡</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="Canada east_5-6/church.jpg"></div>
+					<div class="data">
+						<h4>古城区圣母院</h4>
+						
+				  </div>
+
+				</div>
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="Canada east_5-6/niagara-falls.jpg"></div>
+					<div class="data">
+						<h4>气势磅礴的尼亚加拉大瀑布</h4>
+					</div>
+		  </div>
+
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="Canada east_5-6/1000Islands.jpg"></div>
+					<div class="data">
+						<h4>千岛湖 - 住宅区</h4>
+						
+					</div>
+				</div>
+				
+			</div>
+
+		
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>加东五天/六天</h1>
+<h3>第一天 原居地--多伦多</h3>
+<p>团友抵达多伦多后由专人送往酒店休息。</p>
+<h3>第二天 多伦多--千岛风情--满地可（车程550公里，约6小时）</h3>
+<p>早餐后，从多伦多出发乘坐豪华旅游巴士前往游览加拿大三大自然奇景的千岛，乘坐游船畅游美加边境的圣罗伦斯河上的著名度假别墅区。</p><p>午餐后前往加拿大第二大城市满地可，随即参观于1976年奥运会举办场地奥林匹克公园，其后改建为北美洲唯一自然生态馆及满地可斜塔，自然生态馆1992年开幕，全馆共分热带雨林，极地，加拿大落叶林，圣罗伦斯河等四个自然生态区，园内共有超过4000只动物和5000棵植物，以及水族馆等，是一处非常具有吸引力，同时也富有教育意义，老少皆宜的旅游景点。满地可斜塔高约175米，倾斜度高达45度，是世界上第一高的斜塔，也是世界上倾斜度最高的斜塔。</p><p>接着前往古意瑰丽的满地可古城区圣母院。晚餐后，游客可自由享受北美小巴黎的浪漫夜生活。</p>
+<h3>第三天  满地可---魁北克古城--满地可（车程500公里，约6小时）</h3>
+<p>早餐后登上皇家山，俯览蒙特利尔市区，入内参观北美洲最大的天主教圣约瑟大教堂。</p><p>其后前往加拿大最古老的有着405年历史的魁北克城，在这充满浓郁欧陆色彩的魁北克城，历史遗迹处处可见：北美唯一保存最完整的古城墙；雍容华贵的古堡大酒店；清秀脱俗的老教堂；气势宏伟的魁北克议会大厦；备受游客欢迎的仿古马车等都会令您忍不住拍照留念。</p><p>午餐将会于法式餐厅内享用特色大餐，让您更充分的享受欧陆的浪漫风情。傍晚返回那个多姿多彩，热情如火的不夜城满地可。</p>
+<h3>第四天 满地可--首都渥太华--京士顿--多伦多（车程500公里，约6小时）</h3>
+<p>早餐后，离开酒店前往加拿大首都渥太华，畅游雕刻艺术登峰造极的国会山庄，观看御林军换兵仪式（季节性），车览名人使节豪华住宅区，总督府，总理府。</p><p>参观加拿大最大和游客最多的博物馆，陈列有从印第安人到外来移民的多种文化如何铸造出今日加拿大文明的内容，完整地介绍了加拿大的历史。</p><p>继而参观加拿大战争博物馆，这是加拿大最大的一个收藏有关战争物品和资料的博物馆，是世界上三个最重要的战争艺术收藏馆之一，展示当今最前卫的武器声光设备，及从印第安人早期防御战的武器到第一，二世界大战的武器，军服和海陆空三军战备宝物展览。</p><p>午餐后回程途径加拿大古都京士顿，参观旧国会大楼即现今市政厅，约黄昏时分返回多伦多。</p> 
+
+
+<h3>第五天 市区瀑布一日游（车程300公里，约3小时） </h3>
+<p>早餐后，从酒店出发途径唐人街，多伦多大学，省议会，CN塔（外观）拍照留念。</p><p>约45分钟市区参观后，驱车前往尼亚加拉大瀑布。首先欣赏IMAX瀑布历史大电影，了解神奇，神秘，，神话般的尼亚加拉瀑布与历史上许多著名的令人震撼和激动不已的事迹。</p><p>其后登上天虹塔360度观景台鸟瞰瀑布迷人的景色及观赏宏伟壮观的美国普通瀑布，新娘面纱瀑布和加拿大瀑布马蹄型瀑布。</p><p>中午自费享用中式午餐后乘搭世界闻名瀑布观光船（季节性行程），磅礴的瀑布从高空奔腾而泻，汹涌澎湃，如雷的水声震耳欲聋，令人叹为观止。其后前往参观及品尝加拿大著名特产冰酒及花旗参。</p><p>后专车送往多伦多机场。五天团行程圆满结束，请搭乘20：00后起飞航班。</p>
+<h3>第六天 多伦多深度游。（车程60公里，约1小时）</h3>
+<p>早餐后，出发先到安大略湖畔搭乘观光船（季节性行程），到市区对岸中央岛。蔚蓝的天空和安大略湖水交相辉映，回首遥望对岸繁华闹市构成一幅叹为观止的图画。登上岛后漫步，绿草如茵，鸟语花香，一望无际的湖泊俨然成为一个大自然的世外桃园。</p><p>其后再登上位于多伦多心脏地带的多市地标，CN塔。塔上瞭望台可观赏安大略湖和多市全景。</p><p>自费午餐后参观唐人街，多伦多大学，省议会。其后参观曾经加拿大首富的私宅，带着这位传奇人物故事的卡萨罗马城堡，屹立在小山上的古堡给人以高贵古朴的神秘感觉，精致的建筑令人叹为观止，5英亩的私人花园，各样的花卉争奇 斗艳，现为多伦多摄影首选景点。</p><p>最后驱车前往最新的Yorkdale , Shopping Mall,数百间商店名牌如Louise Vuitton, Burberry, Coach等等，包你满载而归，最后专车前往多伦多机场。</p>
+
+
+
+
+</div>
+</body>
+</html>

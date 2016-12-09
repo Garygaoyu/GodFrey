@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="Vancouver 1 day/Gastown.jpg"></div>
+					<div class="data">
+						<h4>夜晚灯火绚烂的煤气镇</h4>
+						
+
+				  </div>
+				</div>
+				
+			
+				<div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_summer/Columbia_SW.jpg"></div>
+					<div class="data">
+						<h4>漫步于280米高的玻璃桥上观赏哥伦比亚冰原</h4>
+						
+
+				  </div>
+				</div>
+								
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_summer/Lake of monster.jpg"></div>
+					<div class="data">
+						<h4>会四季变色的水怪湖</h4>
+					</div>
+		  </div>
+
+			                <div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_winter/lake.jpg"></div>
+					<div class="data">
+						<h4>碧绿的翡翠湖</h4>
+						
+					</div>
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_summer/Sulphur_skyride.jpg"></div>
+					<div class="data">
+						<h4>乘坐缆车观赏硫磺山美景</h4>
+						
+					</div>
+				</div>
+                
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>五天团（温哥华+班芙四日游）</h1>
+<k>第一天</k><p>早餐后游览温哥华名胜，到访早期移民聚居地-煤气镇，参观唯一蒸汽钟，加拿大广场，会展中心，冬奥火炬公园，唐人街，史丹利公园。游毕后前往著名的GRANVILLE&nbsp;ISLAND市集，您可选购各种纪念品和农副产品。午餐后前往著名的CAPILANO 吊桥，您可自费走上雄伟的吊桥，测试一下您的胆量和欣赏美丽的景色。之后返回温哥华市区游客可以在名店街ROBSONSTREET自由购物。</p>
+
+<k>第二天：</k><p>早上乘车开始踏上旅途。途径菲沙河谷及多个低陆平原地区。再沿告诉公路前往以盛产花旗参知名的甘露市，午餐于当地餐厅享用。餐后前往花旗参场，一睹花旗参种植过程，并有专人讲解花旗参品种。继而前往崇山峻岭之间的飞鹰坳，此处是太平洋铁路东西横贯的接驳点，也是铁路注下最后一口钉的地方。游毕后，途经风景优美的鬼镇。继而经一号公路的最高点罗渣士坳。稍后抵达黄金镇，晚餐于当地餐馆享用。 住宿黄金镇。</p>
+<k>第三天：</k><p>早餐后沿被誉为世界上最美的公路-冰原大道途经佩图湖前往世界知名的哥伦比亚冰川，抵达后享用午餐，餐后可乘坐巨型雪车前往深达300公尺的亚达巴斯冰河面，使您亲身接触到由第二次冰河时期所遗留下来的遗迹，一生难得一见。继而游览比邻哥伦比亚冰川的玻璃桥，欣赏洛矶山自然历史而建最佳观景位置。团友可漫步于280米高的玻璃桥上，近距离欣赏全球最独特的生态系统。再往班芙市游览弓河瀑布。团友有充裕时间于市中心自由活动及购物。住宿班芙</p>
+<k>第四天：</k><p>早餐后由导游安排前往硫磺山，团友可乘架空缆车登上海拔7500英尺高的山岭上欣赏班芙的全景。继而前往参观被称为洛矶山宝石的路易斯湖，在充裕的时间下漫步于湖畔，但见如镜一般的湖面倒影宏伟的山峰及冰川。午餐于湖畔酒店餐厅一边欣赏如画的风景，一边享用丰富的美食。餐后途经自然石桥及优鹤国家公园内最大的湖泊，宛如绿宝石般的翡翠湖。黄昏时分抵达维农。晚餐于当地餐厅享用。 住宿 维农</p>
+<k>第五天:</k><p>早餐后前往参观当地著名的蜂蜜场，在特制的玻璃外，亲身观看工蜂的日常生活。继而游览变色湖，每年不同的季节，湖水都呈现不同的青，蓝，绿及靛色。游毕后前往著名的酿酒厂，了解酿酒过程。临近农庄处处，使人心旷神怡。午餐于当地餐厅享用。餐后前往极富盛名的水怪湖。团友可与湖怪石像拍照。之后沿高速公路返回温哥华。于黄昏时分抵达温哥华。</p>
+
+
+</div>
+</body>
+</html>

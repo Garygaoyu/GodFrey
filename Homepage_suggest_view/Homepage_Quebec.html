@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+					
+			  <div class="slideshow_item">
+					<div class="image"><img src="../img/OldQuebec.jpg" width="2000" height="1313"></div>
+					<div class="data">
+						<h4>Old Quebec&nbsp;-&nbsp;魁北克历史城区</h4>
+					</div>
+		  </div>
+
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Citadelle.jpg" width="1023" height="773"></div>
+					<div class="data">
+						<h4>Citadelle&nbsp;&nbsp;魁北克城堡&nbsp;-&nbsp;一处军事设施和官邸</h4>
+						
+					</div>
+				</div>
+				
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>魁北克</h1>
+<p>Quebec City魁北克市是魁北克省首府。主要使用法语。魁北克市是墨西哥以北唯一的留有古老城墙的北美洲城市。当中的魁北克历史城区也是联合国教科文组织世界文化遗产。</p>
+<h3>主要景点：</h3>
+<k>Old Quebec</k><p> 魁北克历史城区位于魁北克市市内。面积约1.35平方千米。原是北美印第安人部落的村聚。1608年法国一名探险家率先对魁北克地进行开发建成，随后其成为新法兰西的首府。英法七年战争后归英国所有，1791年，成为英属北美下加拿大省的首府。魁北克古城的城中心位于一块高地上，并保留着北美地区唯一留存至今的古城墻，全长4.6公里。古城区分上城区于下城区两大部分。作为魁北克历史城区的标志建筑的魁北克古堡（1892年建立）就坐落于上城区，耸立于戴蒙德角的最高点。魁北克历史城区作为北美殖民化以及近代化进程的重要历史见证，于1985年被列入世界文化遗产。魁北克历史城区到处禁行摩托车，持有通行证的住民以及工作者除外，但此摩托车禁令不在boulevard Champlain, rue Dalhousie, quai Saint-André, 或者 rue Saint-Paul实施。</p>
+<k>Citadelle</k><p> 魁北克城堡是一处军事设施和官邸，位于魁北克市的钻石岬角上，毗邻亚伯拉罕平原。它是北美洲唯一保留了城墙的城市魁北克市防御工事的一部分。</p>
+</div>
+</body>
+</html>

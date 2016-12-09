@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="img/plane1.jpg" width="1300" height="658" alt=""/></div>
+					<div class="data">
+						<h4>波音飞机场</h4>
+						
+
+				  </div>
+				</div>
+				
+			
+				<div class="slideshow_item">
+					<div class="image"><img src="img/plane2.jpg" width="1300" height="658" alt=""/></div>
+					<div class="data">
+						<h4>飞机装配车间</h4>
+						
+
+				  </div>
+				</div>
+								
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="img/plane3.jpg" width="1300" height="658" alt=""/></div>
+					<div class="data">
+						<h4>飞机框架</h4>
+					</div>
+		  </div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>1天团（波音飞机场，工厂直销店)</h1>
+<h3>行程特点:</h3>
+  <p>参观波音飞机场耗资二千一百万美元,占地73,000 平方尺的展览馆及电影设施,亲眼目睹人生难得一见的飞机装配情況更可參加馆內各项互动游戏,设计梦寐以求之飞机体验最新型之飞机,如:747,767,777 及787</p>
+  <p>回程稍停著名工厂直銷店,随意购物,以供自用或送赠亲友。</p>
+
+<h3>行程：</h3><p>是日早上于指定地点齐集后，乘专车出发，前往参观世界著名之波音飞机制造厂。但见落成之建筑物内，设置有各式各样电脑飞机设计及互动游戏，客人可随意设计自己梦寐以求的飞机，并亲身体检最新型之机型，如：747767，777和787机种。探访中心内，更有大型电影院，介绍波音飞机公司之历史及产品等。随后进入宏伟的飞机装配工厂，团友可亲眼目睹人生难得一见的飞机装配情形，馆内更有各式各样之波音飞机纪念品供游客选购。随后稍停于西雅图高级奥特莱斯工厂直销店中心，团友可随意购物，以供自用或送赠亲友。当夕阳西下之时，由专车送返温哥华。</p>
+
+
+
+</div>
+</body>
+</html>

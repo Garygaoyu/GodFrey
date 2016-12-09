@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/capitol_building.jpg"></div>
+					<div class="data">
+						<h4>United&nbsp;States&nbsp;Capitol&nbsp;-&nbsp;美国国会大厦</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Lincoln_Memorial.jpg"></div>
+					<div class="data">
+						<h4>Lincoln&nbsp; Memorial&nbsp;-&nbsp;林肯纪念堂</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/WTMounment.jpg"></div>
+					<div class="data">
+						<h4>美国华府的地标&nbsp;-&nbsp;Washington&nbsp;Monument&nbsp;&nbsp;华盛顿纪念碑</h4>
+						
+				  </div>
+
+			  </div>
+              <div class="slideshow_item">
+					<div class="image"><img src="../img/White-House.jpg"></div>
+					<div class="data">
+						<h4>美国总统的官邸&nbsp;-&nbsp;White&nbsp;House&nbsp;&nbsp;白宫</h4>
+						
+				  </div>
+
+			  </div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/NMNH.JPG" ></div>
+					<div class="data">
+						<h4>National&nbsp;Musuem&nbsp;Of&nbsp;Natural&nbsp;History&nbsp;-&nbsp;美国国家自然历史博物馆</h4>
+						
+				  </div>
+
+			  </div>
+<
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>华盛顿</h1>
+<p>Washington 华盛顿全称为华盛顿哥伦比亚特区，是美利坚合众国的首都，是美国的政治中心。白宫、国会、最高法院以及绝大多数政府机构均设在这里。华盛顿还是美国的文化 中心之一。全市有乔治敦、乔治•华盛顿等9所高等院校。华盛顿市民的一些参政权与居住在各州的一般美国民众不同：他们在众议院仅有一名不具选举权的代表， 而且没有联邦参议员。</p>
+<h3>主要景点：</h3>
+<k>United States Capitol</k><p>美国国会大厦位于华盛顿偏东处，但常被看作华盛顿市区的中心。华盛顿特区建筑物地址的东西南北都是以国会大厦作为基准。由于电视报道华府作出决定时多出现的是国会大厦，加之经常配合有“白宫方面宣布”的言辞，且其风格巍峨挺拔，导致不了解的人在很长一段时间内，将国会大厦认为是白宫——美国总统官邸暨办公室。</p>
+<k>Lincoln Memorial</k><p> 林肯纪念堂为纪念美国第十六届总统亚伯拉罕•林肯而建。林肯对黑奴解放作出了伟大的功勋，他在1865年4月14日被刺身亡。纪念堂于1914年破土动工，完成于1922年。位于华盛顿特区国家广场（National Mall）西侧，阿灵顿纪念大桥（Arlington Memorial Bridge）引道前，与国会和华盛顿纪念碑成一直线。</p>
+<k>Washington Monument</k><p> 华盛顿纪念碑是美国华府的地标，为纪念美国总统乔治•华盛顿而建造，石碑建筑物的内部中空，是世界最高的石制建筑，原本米尔斯的最初设计是在底部有开国英雄柱廊围绕着华盛顿纪念碑，但在美国工兵处陆军上校凯西被托付重新设计地基与塔身之后，他放弃了柱廊的构想，专注于方尖碑的建造，并将地基挖深、以古埃及的比例重新设计主塔。</p>
+<k>White House</k><p> 白宫The White House，直译是“白色的房子”，由于是美国总统的官邸、办公室。供第一家庭成员居住，所以中文译成“白宫”。对人们来说白宫总是充满了神秘感。根据白宫支出由全体纳税人担负的原则，白宫的一部分在规定时间内向全世界公民开放，因此成了游人观光的热点。</p>
+<k>Capitol Hill</k><p> 国会山是美国国会的办公大楼，建在一处海拔为83英尺的高地上，故名国会山。 国会山Capitol Hill，该区汇集了所有的政治景点和观光景点，值得一游的是国家广场沿街的史密苏尼博物馆群（Smithsonian Institution）。该区到处都是政客议事的餐厅。若要去其它区，靠近东部市场（Eastern Market）的重修后的联合车站（Union Station）和许多地铁车站都是不错的选择。 国会山也就是通常说的国会大厦,指作为美国国会办公机构的国会建筑,美国国会是美国联邦政府的立法机构。从远处望去，国会大厦是一座巨柱环立的建筑物，中间是皇冠形的圆顶式大楼，这座白色大圆顶的政府大楼用白砂石和大理石建成，长751英尺，宽350英尺，顶尖离地面有135英尺。中心部分上面竖有一座高19.5英尺的青铜“自由雕像”，为华盛顿最引人注目的标志。国会大厦南侧为下院，北侧为上院。国会内天花板与墙壁上绘满了以建国史为题材的壁画。</p>
+<k>National Museum of Natural History</k><p>美国国家自然历史博物馆是世界上最大的博物馆体系-史密森尼博物馆所属的十六所博物馆之一，开馆于1910年，展品多达一亿二千万件，从恐龙化石到各种保存完好的珍贵动物标本、珍稀矿石等。这里还是著名电影《博物馆惊魂夜》的拍摄地。</p>
+
+
+</div>
+
+
+
+</body>
+</html>

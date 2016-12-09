@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Manhattan.jpg" ></div>
+					<div class="data">
+						<h4>纽约市的中心区&nbsp;-&nbsp;Manhattan&nbsp;&nbsp; 曼哈顿</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/centralpark.png"></div>
+					<div class="data">
+						<h4>Central&nbsp;Park&nbsp;-&nbsp;中央公园</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/empire-state-building.jpg"></div>
+					<div class="data">
+						<h4>Empire&nbsp;State&nbsp;Building&nbsp;-&nbsp;帝国大厦</h4>
+						
+				  </div>
+
+			  </div>
+              <div class="slideshow_item">
+					<div class="image"><img src="../img/Ground-Zero.jpg"></div>
+					<div class="data">
+						<h4>Ground&nbsp;Zero&nbsp;-&nbsp;世贸中心遗址</h4>
+						
+				  </div>
+
+			  </div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/Statue_of_Liberty.jpg"></div>
+					<div class="data">
+						<h4>Statue&nbsp;of &nbsp; Liberty&nbsp;-&nbsp;自由女神像</h4>
+						
+				  </div>
+
+			  </div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/5thAVE.jpg"></div>
+					<div class="data">
+						<h4>全球最贵的购物街&nbsp;-&nbsp;Fifth&nbsp; Ave&nbsp;&nbsp;第五大道</h4>
+						
+				  </div>
+
+			  </div>
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>纽约 </h1>
+<p>New York City 纽约是美国最大城市和第一大港，也是世界第一大城市，全市由五个区组成：曼哈顿(Manhattan)、布鲁克林(Brooklyn)、皇后区(Queens)、布郎克斯(Bronxs)和斯塔滕岛(Staten Island)。美国人经常直呼纽约市为“The City”，因为她拥有许多世界闻名的博物馆和餐厅、激动人心的景点、丰富多彩的娱乐活动以及无与伦比的购物场所。现在最热门的活动是什么？在纽约你可以找到答案。同时，作为世界上摩天大楼最多的城市，她也因此有了“站着的城市”之称。另外，纽约还是美国文化、艺术、音乐和出版中心，有众多的博物馆、美术馆、图书馆、科学研究机构和艺术中心，美国三大广播电视网和一些有影响的报刊、通讯社的总部都设在这里。总之一句话，纽约不代表美国的一切，但美国的一切你都能在纽约找到。</p>
+<h3>主要景点：</h3>
+<k>Manhattan</k><p> 曼哈顿：这是纽约市的中心区，占纽约市总面积的70％。纽约著名的百老汇、华尔街、帝国大厦、格林威治村、中央公园、联合国总部、大都会艺术博物馆、大都会歌剧院等名胜都集中在曼哈顿岛，使该岛中的部分地区成为纽约的CBD。</p>
+<k>Central Park</k><p>中央公园：从高空俯瞰中央公园(Centeral Park)，就像在杂乱纷呈的房间里摆的一张台球桌，一下就引起你的注意：它是一块长方形绿荫地，宁静地伫立在城市纵横交错的衢道网络中。</p>
+<k>Times Square</k><p> 时代广场是美国纽约市曼哈顿的一块街区，以时代广场大厦为中心聚集了近40家商场和剧院，是繁盛的娱乐及购物中心。无论白天黑夜，你都可以被那些巨幅电子广告牌招引，随着平均每天约七万人次的高密度人流，感受那疯狂膨胀到无限的缤纷世界。跻身纽约时报广场广场，涌动的是世界不同肤色、不同国家、不同民族的人流；展示的是一个没有舞台的舞台，没有导演但比导演导出的还要绚丽的世界时装模特秀。</p>
+<k>Empire State Building</k><p> 帝国大厦始建于1930年3月，是当时使用材料最轻的建筑，建成于西方经济危机时期，成为美国经济复苏的象征，如今仍然和自由女神一起成为纽约永远的标志。曾为世界第一高大楼和纽约市的标志性建筑。帝国大厦顶部的泛光灯的颜色会因时间或重大事件而改变，比如说在911事件后就亮了3个月的蓝色灯，以示哀悼。帝国大厦共有102层，包括电视天线塔在内高度达1，454英尺(约443.18米)，是装饰派艺术建造的办公大楼，于1931年建成。游客在第86层和102层上可以看到附近4个州的部分景色，在第86层山有户外漫步场地。位于5号大道进出口处的厅廊有内容不断变化的展览馆，其中包括孩子们特别喜欢看的金刚表演以及世界展览的8大奇迹。</p>
+<k>Ground Zero</k><p>世贸中心遗址/归零地指的就是在“9•11恐怖袭击”中倒塌的世界贸易中心遗址，如今已成为游客的必到之地。世贸双子塔曾经傲视全球，现在只剩下一片空地，两排铁栏围出一条走道，铁栏后挂着“我们永远不会忘记”的大布条。栏前就是“归零地”，可以看到起重机、挖土机、卡车、建筑工人清理废墟的情景。被挖空了的巨大废墟像一个巨大的窟窿，让人的心情立刻变得沉重起来。</p>
+<k>Charging Bull</k><p> 华尔街铜牛是美国华尔街的标志，是一座身长5米丶体重6300公斤的铜牛塑像。铜牛最后被搬到与华尔街斜交的百老汇大街上安了家。华尔街铜牛是“力量和勇气”的象征，喻义着只要铜牛在，股市就能永保“牛”市。</p>
+<k>Statue of Liberty</k><p> 自由女神像：自由女神像是美国国家的纪念碑，是旅行者游览至纽约的第一站。由设计埃菲尔铁塔的法国土木工程师古斯塔夫•艾菲尔设计，法国出资建造，花费10年时间建成，象征两国友谊，建在自由岛(Liberty Island)上。</p>
+<k>Fifth Avenue</k><p> 第五大道是曼哈顿一条重要的南北向干道，南起华盛顿广场公园，北抵第138街，这里是全球最贵的购物街。</p>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/centennial fire.jpg" width="1000" height="665"></div>
+					<div class="data">
+						<h4>在国货大厦前的不熄之火</h4>
+						
+					</div>
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../Canada East/Canada East 8-10/ottawa.jpg"></div>
+					<div class="data">
+						<h4>Parliament&nbsp;Building&nbsp;-&nbsp;国会大厦</h4>
+					</div>
+		  </div>
+				
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>渥太华</h1>
+<p>Ottawa渥太华是加拿大的首都，全国第四大城市。是联邦政府的所在地，国会大厦成百上千的绿铜屋顶、皇家骑警、著名的郁金香花园，被国人视为自己国家的象征。这里现今已经成为了全世界有名的旅游城市。首都渥太华是世界上绝无仅有的以英、法文化为主多元文化并存的首都城市。渥太华以花享誉盛名，以水闻名遐迩，更以枫叶和冰雪著称于世。国家机构、山林、公园、水道以及不同风格的历史建筑构成了渥太华独特的景观。首都渥太华是中国国家领导人到访加拿大的必到之地，是中国人家喻户晓的“大山”的故乡。不论您和您的伙伴是来渥太华观光旅游的，还是来参加商务会奖的，这里都有太多您们不可错过的名胜景点。在您闲暇之余，不妨认真逛逛这个美丽的首都城市，欣赏不一样的异国情调。</p>
+<h3>主要景点：</h3>
+<k>Parliament Hill</k><p> 国会山国会大楼前的广大草坪中央，有被称为（Centenial Flame）的不熄之火，从1967年7月1日引然后就一直燃烧到现在，而且，「水火不容」的道理在此地并不适用，因为，「不熄之火」正是在水面上熊熊燃烧着，而自火中流出的水，可也是常年温热的。国会大楼中，最引人注目的是高约87公尺的和平之塔（Peace of Tower），塔上有53个钟（Carillon），每天下午一点便会发出美丽嘹亮的钟声，钟声飘扬在城市里，仿佛在告慰第一次世界大战时为国捐驱的6万6千6百50位加拿大战士之灵。在和平塔上还有展望台，台上可眺望渥太华全景，塔上会于国会大楼开会期间燃起油灯。 夏日的清晨，凉风习习，在国会大厦前可以观看到皇家禁卫军的换岗操练仪式。</p>
+<k>Parliament Building</k> <p>国会大厦</p>
+
+
+</div>>
+</body>
+</html>

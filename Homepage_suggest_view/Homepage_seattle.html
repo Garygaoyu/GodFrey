@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Space-Needle.jpg"></div>
+					<div class="data">
+						<h4>屹立在建筑物之中的太空针</h4>
+						
+					</div>
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../img/pike-place.jpg"></div>
+					<div class="data">
+						<h4>Pike&nbsp;Market&nbsp;Place的新鲜水果</h4>
+					</div>
+		  </div>
+				
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>西雅图</h1>
+<p>Seattle 西雅图是美国华盛顿州的一座港口城市。波音公司将其制造中心定于此地。西雅图被认为是垃圾音乐的诞生之地。其咖啡消费量极大，是“星巴克”诞生之地，第一家门店就在此地。</p>
+<h3>主要景点：</h3>
+<k>Space Needle</k><p> 太空针塔是在西雅图市的市中心区域。因1962年世界博览会在西雅图举办而兴建，建成初期每日有接近20,000人次乘电梯登塔参观，该届博览会共吸引约230万参观者。太空针塔高约184米，最大宽度为42米，总重约9,550吨。它可以抵御时速320公里的强风和9.1级的地震，且有25支避雷针防止电击。目前太空针塔属于私人产业。太空针塔的主要设施都在其离地159米的观光层，例如天空城市餐厅和观景台。站在塔顶，不单能看到全西雅图市中心的景观，还可以看到奥林匹克山脉、卡斯卡德山脉、雷尼尔山、依利雅特湾和其附近的岛屿等。太空针塔高度低于同区很多建筑，但在关于西雅图的照片中，它往往出现在一个显著的位置。因为太空针塔离其它更高的建筑至少一公里，而比太空针塔更高的建筑相对集中在某个区域。</p>
+<k>Pike Place Market</k><p> 派克市场位于美国西雅图市中心的派克街，是全美国最老的农贸市场。它以贩卖当地出产的农作物闻名，被称为“西雅图心脏”。派克市场是西雅图最重要的观光景点，每年吸引100多万名游客，共有200多个摊位、190个手工艺工匠和240个街头艺人。全球最大咖啡连锁店星巴克的第一家门店就在这个市场对面的街上。</p>
+
+</div>>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="img/SeattleDT.jpg" width="930" height="481" alt=""/></div>
+					<div class="data">
+						<h4>西雅图市中心</h4>
+						
+
+				  </div>
+			  </div>
+				
+			
+				<div class="slideshow_item">
+					<div class="image"><img src="img/spaceneedle.jpg" width="966" height="543" alt=""/></div>
+					<div class="data">
+						<h4>Space&nbsp;Needle&nbsp;-&nbsp;太空针 </h4>
+						
+
+				  </div>
+		  </div>
+								
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="img/PremiumOutlet.jpg" width="1200" height="707" alt=""/></div>
+					<div class="data">
+						<h4>在Premium&nbsp;Outlet购物名牌商品</h4>
+					</div>
+		  </div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>1/2天团（西雅图观光/购物)</h1>
+<h3>行程:</h3>
+<k>第一天：</k><p>从美，加边界驱车大约二小时便可到达华盛顿洲最大商业城市西雅图。西雅图市地标 - 太空针塔，1962年世界博览会时所建，游客可自费购票登上高达180米的眺望台塔顶参观（约美元24美元成人/14美元小童）游览著名公众市場,貨品琳琅滿目,各种地道美食,新鮮蔬果及乳酪产品,多個售卖古董的小摊子，也许能找到阁下的心头好。参观星巴克星巴克老店品尝香浓咖啡。游览渔人码头品尝地道蛤蜊汤及炸鱼薯条。可自费参观海洋水族馆（约美元22美元成人/15美元小童）</p>
+
+<k>第二天：</k><p>是日早上于指定地点集合后出发，进入美国华盛顿州，前往著名之西雅图直销店工厂直销中心（奥特莱斯），该中心有超过110间名店，如：Abercrombie＆Fitch的奥特莱斯（新），迪斯尼商店奥特莱斯（新），Michael Kors，BURBERRY，POLO，THE NORTH FACE，NIKE，COACH等等。客人更可自由自在购买疯狂减价的物品。</p>
+
+
+
+
+</div>
+</body>
+</html>

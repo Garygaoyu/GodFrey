@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create beautiful slideshows with jQuery Cycle - Backslash</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Mag-Mile.jpg" ></div>
+					<div class="data">
+						<h4>壮丽一英里&nbsp;-&nbsp;Magnificent Mile&nbsp;北密歇根大街</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/willis_tower_skydeck.jpg"></div>
+					<div class="data">
+						<h4>从&nbsp;Willis&nbsp;Tower&nbsp;Skydeck &nbsp;上俯瞰芝加哥街景</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/millennium-park.jpg"></div>
+					<div class="data">
+						<h4>Millenium &nbsp;Park&nbsp;-&nbsp;千禧公园公园</h4>
+						
+				  </div>
+
+			  </div>
+              <div class="slideshow_item">
+					<div class="image"><img src="../img/artmuseum_chicago.jpg"></div>
+					<div class="data">
+						<h4>世界上一流的艺术博物馆&nbsp;-&nbsp;Art Institute&nbsp; of&nbsp; Chicago&nbsp;&nbsp;芝加哥艺术馆</h4>
+						
+				  </div>
+
+			  </div>
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>芝加哥</h1>
+<p>Chicago 芝加哥属伊利诺伊州，东临密歇根湖，是美国仅次于纽约市和洛杉矶的第三大都会区。这里是麦当劳、爆米花、拉链和旱冰鞋的第一故乡，在它们的帮助下，芝加哥的富裕指数一路飙升，现仅次于东京、纽约、洛杉矶，排名世界第四。有人说：“爱上芝加哥就像是爱上一个塌鼻子的女人，尽管有不让人满意的地方，但却无法自拔。”通过芝加哥的别名，例如“第二城”、“风城”、“芝城”、“摩天城”等等就不难看出这个城市的个性，但它并没有因为刺骨的风和冰冷建筑而降低自身的魅力，而是完美的将绮丽的建筑、原始的自然美景和饱满的艺术氛围结合起来。可以说芝加哥本身就是一个景点，你不需要特地的去寻找，只要肯花时间，你就一定会爱上它。芝加哥拥有：1204座摩天大楼，552个公园 200多个艺术画廊和剧场 26英里湖畔美景 当然，还有一个美国总统巴拉克•奥巴马。</p>
+<h3>主要景点：</h3>
+<k>Magnificent Mile</k><p> 壮丽一英里是北密歇根大街的昵称，是一条足以媲美香榭丽舍大街的街道，是用餐、购物及其住宿的绝佳去处。此外这里被誉为“偶遇”明星的最好地点，像小甜甜布兰妮、贾斯汀和卡梅隆等都曾在此出现。</p>
+<k>Loop</k><p> 大回圈也称卢普区，是芝加哥的商业与旅游中心。这里还集中了芝加哥大部分的博物馆、体育场和剧院，来芝加哥的旅客多会选择住在这个区域，可以步行到达大部分的景点。</p>
+<k>Willis Tower Skydeck</k><p> 芝加哥威利斯大厦是美国芝加哥的一幢办公楼，由SOM建筑设计事务所设计，于1974年建成，楼高442.3米，含天线527米。地上108层，地下3层，共有110层。最初拥有者美国西尔斯-罗巴克公司。在第103层有一个供观光者俯瞰全市用的观望台。它距地面412米，天气晴朗时可以看到美国的4个州。</p>
+<k>Millenium Park</k><p>千禧公园公园地处芝加哥市区中心，除了现代感十足的雕塑、建筑，还有公共互动艺术、户外美食和古典音乐等丰富活动。王冠喷泉（Crown Fountain）——在千禧公园内这座现代风格的喷泉中，看不到喷水兽头。相反，西班牙艺术大师Jaume Plensa将1000多位芝加哥市民的脸投射在50英尺大的LED屏幕上，营造出喷泉从他们口中喷出的幻象。露天音乐厅（Jay Pritzker Music Pavilion）——建筑设计师Frank Gehry为千禧公园设计了这座壮观的户外音乐厅，这里是公园音乐节（Grant Park Music Festival）的所在地，也常常举办免费音乐会和精彩活动。云门（Cloud Gate）——这是英国艺术家Anish Kapoor在美国的首件公开户外作品，由完美抛光的不锈钢板构成，反射着芝加哥独特的都市景，凡是来芝加哥旅游的游客都会在此留影。</p>
+<k>Art Institute of Chicago</k><p>芝加哥艺术馆这座世界一流的艺术博物馆汇集了40个世纪以来人类创造力的精粹。从古老的中国铜器到当代艺术工艺品，囊括了众多独一无二的珍品。馆内典藏有大量印象派和后印象派的著名画作，包括出自莫奈Monet、雷诺阿Renoir、德加Degas和梵高Van Gogh等众多大师的杰作，值得花时间逛逛。其永久收藏馆中的著名画作，包括格兰特•伍德的美国哥特式油画、爱德华•霍普的《夜游者》、毕加索的《老吉他手》、乔治•修拉的《1884年大碗岛的星期日》等。</p>
+
+
+</div>
+
+
+
+</body>
+</html>

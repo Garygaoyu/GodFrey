@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+ <link href="../css/floatmenu.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); 
+	});
+	
+});
+</script>
+<script  type="text/javascript">
+  $(document).ready(function() {
+   
+   
+    var nav = $('#nav');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.scroll(function() {
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0,
+                left: nav.offset().left,
+                width: nav.width()
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
+});</script>
+
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/HooverDam.jpg"></div>
+					<div class="data">
+						<h4>沙漠之钻&nbsp;-&nbsp;Hoover&nbsp;Dam&nbsp;&nbsp;胡佛水坝</h4>
+						
+					</div>
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../img/GrandCanyon.jpg"></div>
+					<div class="data">
+						<h4>色彩斑斓的Grand&nbsp;Canyon&nbsp;-&nbsp; 科罗拉多大峡谷</h4>
+					</div>
+		  </div>
+          <div class="slideshow_item">
+					<div class="image"><img src="../img/GrandCanyonSW.jpg"></div>
+					<div class="data">
+						<h4>Grand&nbsp;Canyon&nbsp;Skywalk&nbsp;&nbsp;大峡谷天空步道&nbsp;-&nbsp;世界上第一个空中玻璃悬挂式的观景走廊</h4>
+					</div>
+		  </div>
+				
+
+                <div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/GoldenGateBridge.jpeg"></div>
+					<div class="data">
+						<h4>Golden&nbsp; Gate&nbsp;Bridge&nbsp;-&nbsp;金门大桥</h4>
+						
+
+				  </div>
+				</div>
+	
+
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="navWrap">
+            <div id="nav">
+                <ul>
+                    <li><a href="#plan1" class="smoothScroll">美西四日精选套餐一</a></li>
+                    <li><a href="#plan2" class="smoothScroll">美西四日精选套餐二</a></li>
+                    <li><a href="#plan3" class="smoothScroll">美西四日精选套餐三</a></li>
+                    <
+                </ul>    
+                <br class="clearLeft" />
+            </div>
+        </div>
+    </div>
+    <div id="information">
+<h3><u>套餐一：&nbsp;4天团（旧金山3天+洛杉矶1天）</u></h3>
+<h3><u>套餐二：&nbsp;4天团（拉斯维加斯3天+洛杉矶1天）</u></h3>
+<h3><u>套餐三：&nbsp;4天团（洛杉矶）</u></h3>
+
+
+<h3 id="plan1" style="margin-top:50px;">4天团（旧金山3天+洛杉矶1天）</h3>
+<k>第一天：</k><p>乘飞机抵达旧金山前往酒店休息，午餐后市区观光。</p>
+<k>第二天：</k><p>早餐后前往著名的斯坦福大学参观。</p>
+<k>第三天：</k><p>早餐后前往著名的优胜美地国家公园游览后乘车返回洛杉矶。</p>
+<k>第四天：</k><p>洛杉矶市区游览后送机。</p>
+
+
+
+<h3 id="plan2">4天团（拉斯维加斯3天+洛杉矶1天）</h1>
+<k>第一天：</k><p>乘飞机前往赌城拉斯维加斯，抵达后入住酒店休息。</p>
+<k>第二天：</k><p>早餐后途径胡佛水坝游览后，前往世界著名的大峡谷，您可以选择西峡谷或者南峡谷近距离接触这个世界著名的景点。</p>
+<k>第三天:</k><p>早餐后途径巧克力工厂，仙人掌庭院，名牌工厂直销中心，抵达洛杉矶。</p>
+<k>第四天：</k><p>洛杉矶市区观光后送机。</p>
+
+<h3 id="plan3">4天团（洛杉矶）</h3>
+<k>第一天：</k><p>乘飞机抵达洛杉矶后入住酒店。</p>
+<k>第二天：</k><p>早餐后洛杉矶市区游览。</p>
+<k>第三天：</k><p>客人可以选择游览环球影城/海洋世界/迪斯尼乐园/棕榈泉购物/圣地亚哥市区游其中之一。</p>
+<k>第四天：</k><p>客人可以选择游览环球影城/海洋世界/迪斯尼乐园/棕榈泉购物/圣地亚哥市区游其中之一。行程结束后送机。</p>
+
+
+<h1>美西景点简介</h1>
+<p><i>迪斯尼乐园(Disneyland)</i>:堪称“全世界最快乐的地方”，特别是近年陆续推出的神奇旅行、天空传奇、玩具总动员 2、泰山等新的表演节目吸引了许多游客。最新落成的“明日乐园”招来更多的游客，让人流连忘返。</p>
+<p><i>环球影城(Universal&nbsp;Studio)</i>:游园观光车将载着你，经过生动逼真的电影场景，如断桥雪崩、山洪爆发、大白鲨等，使你有身临其境的感觉﹔“水世界”的真人特技表演，魔鬼终极者3D 和SHERK 4D 立体电影逼真的效果，更令人叹为观止。</p>
+<p><i>海洋世界(Sea&nbsp;World)</i>:加州最美的海港圣地牙哥，世界最大的水族馆，观赏企鹅、海狮、海豚等海洋动物为您精彩表演，以及难得一见重逾两吨的杀人鲸演出。</p>
+<p><i>拉斯维加斯(Las&nbsp;Vegas)</i>:五光十色、世界闻名的赌城，晚上欣赏金碧辉煌的威尼斯酒店，电脑幻灯天幕表演，音乐喷泉水柱表演，豪华赌场百乐宫等，观赏各大酒店精彩的表演。</p>
+<p><i>胡佛水坝(Hoover&nbsp;Dam)</i>:七大现代土木工程奇迹之一，耗费了大量资金与人力，于 1936年竣工并交付使用，一座跨科罗拉多河水坝，所发出的电力可供应内华达州，亚利桑那州及加州等地。</p>
+<p><i>大峡谷/玻璃桥(Grand&nbsp;Canyon/Skywalk)</i>:世界七大奇景之一的大峡谷(自费)，欣赏阳光和岩壁折射的奇景，壮观与艷丽无与伦比，赞叹宇宙和造物者之神奇。玻璃桥悬空于大峡谷海拔四千呎之上，这座耗资三千万美元打造而成的全世界最高建筑物，桥下美景尽收眼帘，使人心情激动。</p>
+<p><i>圣塔芭芭拉(Santa&nbsp;Barbara)</i>:被誉为“美国的蔚蓝海岸”，位于洛杉几以北仅 90 公里处.它美丽的自然风光、纯朴的海滩、当地风格和附近的葡萄园象征着多年来令游客怦然心动的南加州风情，复杂而又简单纯粹，优雅而又轻松随性。各界名流与当地居民一起，共同将圣塔芭芭拉打造为一个天才、知识、环保意识和创造性类型人才的圣
+地。整个城市的西班牙殖民时期建筑与现代细节相融合，使它拥有一种休闲优雅的气质，这正是其与加州的许多其他海滩城镇相比的特殊之处。</p>
+<p><i>旧金山(San Francisco)</i>:迷人的旧金山，美国西岸的标志金门大桥、北加州最多游客游览的渔人码头，更可乘坐游船(自费)欣赏旧金山海湾、历史文化的中国城、巴拿马政府赠与的世界博览会旧址艺术殿堂以及着名的九曲花街。</p>
+<p><i>斯坦福大学(Stanford Universal)</i>:1891 年敞开大门的斯坦福大学，参加校门广场、古朴的砂岩大门、优雅的胡佛塔，庄严的纪念教堂，深沉的罗丹雕塑群，典雅的走廊，在这所世界着名学府厚重、粗犷与深邃的建筑风格后面、领略斯坦福大学深厚的文化积沉与丰富的文化底蕴。</p>
+<p><i>优胜美地(Yosemite):加州着名的国家公园，巍峨雄伟的花岗岩，气势磅礡的瀑布，宁静的山谷，巨木参天，高山流水，被冰川雕琢的嶙峋不堪的巨岩峭壁以及波光粼粼的湖面，使您恍若置身于世外桃源。</p>
+<p><i>丹麦城(Solvang)</i>:您会看到古老的风车、北欧式的建筑、西班牙式的教堂，并且可以品尝闻名于世的丹麦糕点</p>
+<p><i>洛杉矶市区游(Las Angeles)</i>:前往加州最吸引人的海滨城市圣塔莫尼卡，岸边林立着酒店，商场，电影院和餐馆。继续往西，盖蒂中心。她是一座集匠心独具的建筑，园艺，绘画，雕刻和摄影艺术品的私人博物馆。随后途经加州大学洛杉几分校UCLA。转往全世界最尊贵的住宅区比佛利山庄，下午前往洛杉几的诞生地EL PUEBLO DE
+LOS ANGELES HISTORIC MONUMENT。这里的欧维拉街是最老最短的街道。享用地道的墨西哥食物，买到传统的墨西哥物品。</p>
+<p><i>棕榈泉工厂直销广场(Palm Spring Factory outlet Plaza)</i>:美国西岸最大的工厂直销广场，这里集中了世界各地时尚品牌 110 多家。不但有流行二品牌，更有 Burberry，Coach，A/X，Calvin Klein，Diesel，Christine Dior，DKNY，D & G，Polo，Giorgio Armani，Gucci，Hugo Boss，Levis，Tommy Hilfiger 等一高端品牌在此聚集，规模之大，品牌之全堪称美西之最。</p>
+<p><i>圣地牙哥市区(San Diego)</i>:航母+游船+老城风情--世界着名美国第七舰队的母港-圣地牙哥港。在此搭乘海湾游轮(团费已包该门票)悠闲的欣赏圣地牙哥港的各大着名景点并有机会一睹世界最强大的航母攻击群。登上拥有辉煌战绩的中途岛航空母舰(团费已包该门票)，参观航母内部构照和设备，之后前往美国最早的公众公园之一，巴博
+亚公园(Balboa Park)，这里曾在1915 年及1935 年举办过世界博览会，园内有15 个主要的博物馆，同时常有戏剧，音乐剧，和各式各样的大型活动在此表演，并在1977 年登记成为国家历史地标。最后一站前往拥有超过百年历史文化的圣地牙哥老城，参观体验加州早期西班牙式建筑物和历史文化。</p>
+
+
+
+
+</div>
+</body>
+</html>

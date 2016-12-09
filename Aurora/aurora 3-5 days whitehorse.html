@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link href="../css/floatmenu.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+<script  type="text/javascript">
+  $(document).ready(function() {
+   
+   
+    var nav = $('#nav');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.scroll(function() {
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0,
+                left: nav.offset().left,
+                width: nav.width()
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
+});</script>
+
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><a href="#"><img src="Aurora/aurora.jpg"></a></div>
+					<div class="data">
+						<h4>美丽的北极光</h4>
+						
+
+					</div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="Aurora/camping.jpg"><a href="#"></a></div>
+					<div class="data">
+						<h4>白马镇北极光观赏</h4>
+						
+					</div>
+
+				</div>
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="Aurora/dog.jpg"></a></div>
+					<div class="data">
+						<h4>狗拉雪橇！， 雪地摩托车</h4>
+					</div>
+				</div>
+
+				
+				<div class="slideshow_item">
+					<div class="image"><a href="#"><img src="Aurora/ice_fishing.jpg"></a></div>
+					<div class="data">
+						<h4>与原住民进行冰上钓鱼等活动</h4>
+						
+					</div>
+				</div>
+				
+			</div>
+
+		
+		
+		
+		
+			
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="navWrap">
+            <div id="nav">
+                <ul>
+                    <li><a href="#plan1" class="smoothScroll">白马市极光观赏</a></li>
+                    <li><a href="#plan2" class="smoothScroll">黄刀镇极光观赏</a></li>
+                    
+                </ul>    
+                <br class="clearLeft" />
+            </div>
+        </div>
+    </div>
+    <div id="information">
+<h3><u>套餐一：&nbsp;白马市极光奇景3-5日</u></h3>
+<h3><u>套餐二：&nbsp;黄刀镇魔幻极光3-5日游</u></h3>
+<div id="information">
+<h3 id="plan1">白马市极光奇景3-5日</h3>
+<k>第一天 温哥华--白马市</k>
+<p>有温哥华乘飞机沿着美丽的育空河抵达育空地区的首府白马市。抵达后乘专车前往酒店，亲切的服务人员将针对极光的行程内容进行简单的说明和讲解。</p><p>晚间约9：30pm专车前往观赏极光，约莫十分钟车程到达极光的观赏区，您可在小屋中快乐的喝起热饮和小点心以及聆听音乐，等待极光的出现。</p>
+<k>第二天 白马市 </k>
+<p>早上10：30am 将展开2小时的市区观光，下午您参加活动。包括：雪上摩托车活动或狗拉雪橇，冰上钓鱼等等。教练将带您狂飙于冰河森林间，享受雪上疾行的乐趣。</p><p>晚上再度展开极光之旅，再次欣赏艳丽动人的极光舞姿。</p>
+<k>第三天 白马市 </k>
+<p>一夜好眠后，今早专车将客人送至白马市机场搭乘飞机返回温哥华。</p>
+<p>或者白天自由活动，晚上继续奇幻的极光之旅。</p>
+<k>第四天/第五天 同第三天 </k>
+
+
+<h3 id="plan2" >黄刀镇魔幻极光3-5日游</h3>
+<k>第一天 温哥华---黄刀镇</k>
+<p>由温哥华前往加拿大西北地区首府黄刀镇，只为亲眼目睹大自然最奇妙的现象--北极光。</p><p>飞抵黄刀镇机场由专人接往酒店登记住宿并有专人为您进行简单的讲解，让您试穿御寒衣物和雪靴。</p><P>晚上大约10点驱车前往观赏极光。在温暖的小木屋内您可愉快的享用咖啡，茶，点心等，等待极光的到来。另外别忘记带您的照相机，当极光出现时可以捕抓极光璀璨的舞姿。</P>
+<k>第二天 黄刀镇</k>
+<p>白天全天自由活动。您可以选择参加自费活动。如黄刀镇市区观光，乘雪地电单车，狗拉雪橇，西北极地户外探险等。</p><p>夜间10点继续前往观赏极光。极光是一种太阳能流和地球磁场碰撞产生的放电现象，在离地面约60里的天空里，所释放出的一百万兆瓦的光芒。极光最常见的颜色是绿色，多种层次的绿色互相叠错，光影不断舞动，有人说看到极光代表好运和幸福，极光引发人类无限幻思，一生一定要看一次。</p>
+<k>第三天/第四天/第五天 </k>
+<p>一夜好眠后，搭乘飞机返回温哥华</p>
+<p>或者白天自由活动，入夜继续观赏美丽的极光。</p>
+</div>
+</div>
+
+</div><!-- #wrapper -->
+</body>
+</html>

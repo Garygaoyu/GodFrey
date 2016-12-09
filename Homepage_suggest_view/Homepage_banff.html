@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create beautiful slideshows with jQuery Cycle - Backslash</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_summer/banffnationalpark.jpg"></div>
+					<div class="data">
+						<h4>Banff National Park&nbsp;-&nbsp;班芙国家公园</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_summer/columbia_icefields.jpg"></div>
+					<div class="data">
+						<h4>Columbia Icefield&nbsp;-&nbsp;哥伦比亚冰原</h4>
+						
+				  </div>
+
+				</div>
+
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../Banff/Banff_winter/lake.jpg"></div>
+					<div class="data">
+						<h4>Lake Louise&nbsp;-&nbsp;路易斯湖</h4>
+						
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>班芙</h1>
+<p>Banff 班芙是加拿大班夫国家公园中最大的城镇。它坐落于艾伯塔省西南落基山脉中。班芙距离卡尔加里市以西约135公里处，加拿大横贯公路旁。班芙往西58公里则是著名的路易斯湖。班芙是著名的度假胜地，并且周围山峦与温泉也广受欢迎。它是重要的户外运动区，主要活动有步行、登山、滑雪等。有许多著名的山峰亦坐落在小镇旁边，如：Mount Randle（2846米），Cascade Mountain 与Mount Norquay。硫磺山（Sulphur Mountain）是著名的景点——“上班芙温泉”和班芙温泉酒店的所在地。</p>
+<h3>主要景点：</h3>
+<k>Banff National Park </k><p>班芙国家公园建于1885年，是加拿大历史最悠久的国家公园。它坐落于落基山脉北段，距加拿大阿尔伯塔省卡尔加里以西约110-180公里处。公园共占地6641平方公里，遍布冰川、冰原、松林和高山。冰原公路从路易斯湖开始，一直连接到北部的贾斯珀国家公园。西面是省级森林和幽鹤国家公园，南面与库特尼国家公园毗邻，卡纳纳斯基斯镇位于其东南方。公园内主要的商业区为弓河山谷的班夫镇。它作为“加拿大落基山脉自然公园群”的一部分，与其它加拿大落基山脉的国家和省立公园一起被列入世界遗产名录中。</p>
+<k>Lake Louise</k><p> 路易斯湖是艾伯塔省班夫国家公园内的一个著名的旅游胜地，此地因风景秀丽的路易丝湖而得名。路易斯湖三面雪山环抱，湖水碧绿绿如翡翠，来自冰河融雪。面对白雪皑皑的雪山和碧绿湖水，矗立著一所豪华的大酒店，那就是班夫温泉酒店的姐妹，路易斯湖城堡酒店。</p>
+<k>Columbia Icefield</k><p> 哥伦比亚冰原是位于加拿大落基山脉的一个冰原，横跨北美洲大陆分水岭。冰原的一部分位于班夫国家公园的西北角和贾斯珀国家公园的南端。面积大约为325平方公里，厚度为100到365米，每年降雪量约为7米。从冰原公路可以看到阿萨巴斯卡冰川，从1844年开始，阿萨巴斯卡冰川明显消融。夏天，游客可以乘坐大巴在冰川上观光。阿萨巴斯卡河、北萨斯喀彻温河以及哥伦比亚河都发源于哥伦比亚冰原。这里是北美洲水文最高点，水向北流入北冰洋，向东流入大西洋，向南向西流入太平洋。</p>
+<k>Jasper National Park</k><p>贾斯伯国家公园是加拿大著名高山国家公园之一，也是加拿大洛矶山脉最大型的的国家公园。位于艾伯塔省洛矶山脉最北边，在班夫国家公园的北面及艾德蒙顿的西面。风景秀丽，环境优美，有多种野生动植物生长其中。占地面积10878平方公里。各种野生动物像北美红鹿、小鹿、山羊、驼鹿、大角野绵羊、亚洲黑熊、美洲黑熊、海狸、落基山鼠兔、土拨鼠和驯鹿数量众多。贾斯珀国家公园内，有佩投湖、弓湖、巫药湖、派翠西亚湖、金字塔山、玛琳湖及玛琳峡谷，景色非常秀丽。这里还有哥伦比亚冰原冰川，温暖的春天，湖泊，和瀑布。当然有美丽的山川。这个公园在1984年被联合国科教文组织宣布为世界遗产。一起成为世界遗产的还有加拿大落基山脉的国家公园和一些省立公园。当选原因是美丽的山地景观，包括山峰、冰川、湖泊、瀑布、峡谷和石灰岩溶洞，而且在这里还找到了化石。
+</p>
+</div>
+
+
+</div><!-- #wrapper -->
+</body>
+</html>

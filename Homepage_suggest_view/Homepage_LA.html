@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create beautiful slideshows with jQuery Cycle - Backslash</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/rodeo drive.jpg" ></div>
+					<div class="data">
+						<h4>以奢侈精品店闻名的购物街&nbsp;-&nbsp;Rodeo&nbsp;Drive&nbsp;&nbsp;罗迪欧大道</h4>
+						
+					</div>
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../img/ChineseTheater.jpg" ></div>
+					<div class="data">
+						<h4>Grauman's &nbsp;Chinese &nbsp;Theatre&nbsp;-&nbsp;中国大剧院</h4>
+					</div>
+		  </div>
+          <div class="slideshow_item">
+					<div class="image"><img src="../img/Hollywood.jpg"></div>
+					<div class="data">
+						<h4>正在进行电影拍摄的&nbsp;Hollywood&nbsp; Universal&nbsp; Studio&nbsp;&nbsp;好莱坞环球影城</h4>
+					</div>
+		  </div>
+          <div class="slideshow_item">
+					<div class="image"><img src="../img/SantaMonica.jpg"></div>
+					<div class="data">
+						<h4>夕阳下的&nbsp;&nbsp;Santa&nbsp;Monica&nbsp;Beach&nbsp;&nbsp;圣莫妮卡海滩</h4>
+					</div>
+		  </div>
+          <div class="slideshow_item">
+					<div class="image"><img src="../img/DisneylandLA.jpg"></div>
+					<div class="data">
+						<h4>DisneyLand&nbsp; Park&nbsp;-&nbsp;迪士尼乐园</h4>
+					</div>
+		  </div>
+          
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>洛杉矶</h1>
+<p>Los Angeles 洛杉矶是一座位于美国西岸加州南部的城市，按照人口排名，洛杉矶是加州的第一大城，也是美国的第二大城[7]，仅次于纽约市。洛杉矶是全世界的文化、科学、技术、国际贸易和高等教育中心之一，还拥有世界知名的各种专业与文化领域的机构。该市及紧邻的区域，在大众娱乐—诸如电影、电视、音乐方面构成了洛杉矶的国际声誉和全球地位的基础。</p>
+<h3>主要景点：</h3>
+<k>Rodeo Drive</k> <p>罗迪欧大道位于比佛利山庄，是一条世界以奢侈精品店闻名的购物街。在街道纷纷设立精品店后，“罗迪欧大道”指的是威尔夏大道和圣塔莫尼卡大道之间相邻街道区域，这些区域都是精品店分布的地点。</p>
+<k>Grauman's Chinese Theatre</k><p>中国大剧院</p>
+<k>Hollywood Universal Studio</k><p>好莱坞环球影城位于市区西北郊。20世纪初，电影制片商在此发现理想的拍片自然环境，便陆续集中到此，使这一块土地逐渐成为世界闻名的影城。1908年好莱坞拍出了最早的故事片之一《基督山恩仇记》。1912年起相继建立制片公司，到1928年已形成了以派拉蒙等"八大影片公司"为首的电影企业阵容。三、四十年代是好莱坞的鼎盛时期，摄制了大量成为电影史上代表作的优秀影片，并使美国电影的影响遍及世界。</p>
+<k>Hollywood Walk of Fame</k><p> 好莱坞星光大道沿着好莱坞大道自东边的高尔街(Gower Street)延伸至西边的拉布雷亚大道(La Brea Avenue)，然后顺着丝兰街(Yucca Street)与日落大道(Sunset Boulevard)之间的藤街由北向南推进。街上有2000多颗镶有好莱坞商会追敬名人姓名的星形奖章，以纪念他们对娱乐工业的贡献。</p>
+<k>Santa Monica Beach</k><p> 圣莫妮卡海滩位于洛杉矶国际机场以北，是加州最吸引人的海滩。这里冬暖夏凉，交通便利，不仅仅适合消夏乘凉，对于那些想度过一个闲适下午的人来说，圣莫尼卡海滩也是最好的选择。圣莫尼卡的中心是第三街步行街，这是一条专门用来游行表演的街道，每到夜间，道路都被艺人、影吧、酒吧和各式各样的小餐馆所占据，热闹非凡。圣莫尼卡码头是圣莫尼卡的象征，建于1909年至1916年间，是西海岸最古老的码头。在圣莫尼卡码头可以游泳、购物、漫步，感受阵阵海风迎面吹拂或是是尽情享受日光浴。</p>
+<k>DisneyLand Park</k><p>迪士尼乐园位于洛杉矶市区东南，是世界上最大的综合游乐场。1955年，美国动画片大师沃尔特•迪斯尼在洛杉矶附近创办了第一座迪斯尼游乐园。 迪斯尼乐园是一座主题游乐公园，主要有主街、冒险乐园、新奥尔良广场、动物王国、拓荒者之地、米奇卡通城、梦幻乐团、未来王国八个主题公园。中央大街上有优雅的老式马车、古色古香的店铺和餐厅茶室等；走在迪斯尼世界中，还经常会碰到一些演员扮成的米老鼠、唐老鸭、白雪公主和七个小矮人。</p>
+
+
+</div>>
+</body>
+</html>

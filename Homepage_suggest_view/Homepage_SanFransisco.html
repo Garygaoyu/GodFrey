@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/GoldenGateBridge.jpeg"></div>
+					<div class="data">
+						<h4>Golden&nbsp; Gate&nbsp;Bridge&nbsp;-&nbsp;金门大桥</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Fishman'sWharf.jpg" ></div>
+					<div class="data">
+						<h4>Fisherman's&nbsp; Wharf&nbsp;-&nbsp;渔人码头</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/lombardstreet.jpg"></div>
+					<div class="data">
+						<h4>世界上最弯的街道&nbsp;-&nbsp;Lombard&nbsp; Street&nbsp;&nbsp;九曲花街</h4>
+						
+				  </div>
+
+			  </div>
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>旧金山</h1>
+<p>San Francisco旧金山是美国加利福尼亚州北部的一座都市。旧金山是北加州与旧金山湾区的商业与文化发展中心，当地住有很多艺术家、作家和演员，在20世纪及21世纪初一直是美国嘻皮文化和近代自由主义、进步主义的中心之一。旧金山也是受欢迎的旅游目的地，与其凉爽的夏季、多雾、绵延的丘陵地形、混合的建筑风格，和金门大桥、缆车、恶魔岛监狱及唐人街等景点闻名。此外，旧金山也是五大主要银行和许多大型公司的总部所在，包括盖璞、太平洋瓦电公司、Yelp、Pinterest、Twitter、优步、Mozilla和Craigslist等。</p>
+<h3>主要景点：</h3>
+<k>Golden Gate Bridge</k><p>金门大桥是世界著名大桥之一，被誉为近代桥梁工程的一项奇迹。金门大桥及旧金山夜景金门大桥的设计者是工程师史特劳斯，人们把他的铜像安放在桥畔，用以纪念他对美国作出的贡献。大桥有6个车道，平均每天有10万辆车的客流量，进城的司机必须付费。在桥两端临海湾的一侧设有观景台和停车场，托尔广场边有一大型礼品店。桥两侧设有约1.2km长的步行道，供行人与脚踏车通行，往返需要一个小时。大桥专设一条行人步行道让游客步行穿越大桥。骑自行车穿越大桥前往索萨利托，然后乘坐渡轮返回是一项非常受欢迎的活动。在渔人码头设有许多自行车租借点。</p>
+<k>Fisherman's Wharf</k><p>渔人码头大致包括从旧金山北部水域哥拉德利广场(Ghirardelli Square)到35号码头(Pier 35)的区域。渔人码头地区拥有旧金山海洋国家历史公园，哥拉德利广场和机械博物馆等景点。其它热门景区，如唐人街，伦巴底街和北滩(North Beach)都在附近。在这里不但可以大啖海鲜和酸面包，还可以参观惊悚搞怪的蜡像馆(Wax Museum)、遨游美丽的水底世界(Underwater World)、欣赏精彩的街头艺人表演或是在宽敞而有格调的购物中心血拼。</p>
+<k>Lombard Street</k><p>九曲花街官方名称为伦巴底街，它是世界上最弯曲的街道。市政当局为了防止交通事故，特意修筑花坛，车行至此，只能盘旋而下，时速不得超过5英里，如今却成为旧金山最吸引人的一条街。在Hyde街与Leavenworth街之间的一个很短的街区，却有八个急转弯，因为有40度的斜坡，且弯曲像“Z”字形，所以车子只能往下单行。你可以来这里考验一下自己的驾驶技术或者只是惬意的遥望和漫步其中。车道两边的花坛里种满了玫瑰，街两边家家户户也都在门口养花种草，花开时节，远远望去，有如一幅斜挂着的绒绣，美不胜收。在花街高处还可远眺海湾大桥和科伊特塔。</p>
+<k>Twin Peaks<k><p>双子峰这是两座海拔约270公尺的山丘，因为形状的关系被早期的西班牙移民昵称为“印第安少女的乳房”，同时也是旧金山境内唯一保留的天然山丘，此地并以360度全景眺望而闻名。登上双子峰是很辛苦的一件事，你需要穿很多衣服以抵挡强风及冷雾，还要努力的爬上陡坡。不过辛苦是有回报的，天气晴朗时，你可鸟瞰旧金山整个市容，甚至可以看旧金山湾旁边的红色金门大桥。这里更是观赏夜景的好地方！</p>
+
+</div>
+
+
+
+</body>
+</html>

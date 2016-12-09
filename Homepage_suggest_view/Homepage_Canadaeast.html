@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create beautiful slideshows with jQuery Cycle - Backslash</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/pic1.jpg" width="1920" height="1200"></div>
+					<div class="data">
+						<h4>世界上第五高的自立式建筑物 &nbsp;- &nbsp;CN Tower 加拿大国家电视塔</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Toronto_night_view.jpg" width="1200" height="797"></div>
+					<div class="data">
+						<h4>在CN塔上俯瞰夜间繁华的多伦多市区</h4>
+						
+				  </div>
+
+				</div>
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/RoyalOntarioMuseum.jpg" width="918" height="612"></div>
+					<div class="data">
+						<h4>皇家安大略博物馆 &nbsp;-&nbsp; 加拿大最大的世界文化和自然历史博物馆</h4>
+					</div>
+		  </div>
+          
+
+				<div class="slideshow_item">
+					<div class="image"><img src="../Canada East/Canada east_5-6/niagara-falls.jpg"></div>
+					<div class="data">
+						<h4>气势磅礴的尼亚加拉大瀑布</h4>
+				
+				
+			</div>
+
+		</div>
+		
+		
+		
+			
+
+		
+	
+	</div>
+	
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>多伦多</h1> 
+<p>Toronto 多伦多是加拿大安大略省首府，加拿大的最大城市。多伦多坐落在安大略湖西北岸的南安大略地区。作为加拿大的经济中心，多伦多是一个世界级城市，也是世界上最大的金融中心之一。目前多伦多的低犯罪率、洁净的环境、高生活水准、以及对多样文化的包容性，令该市被多个经济学智囊团列为世界上最宜居的城市之一。</p>
+<h3>主要景点：</h3>
+<k>CN Tower</k><p> 加拿大国家电视塔是一座位于加拿大安大略省多伦多的电波塔。塔高553.33米，现为世界上第五高的自立式建筑物。该塔被认为是多伦多的地标，每年吸引超过200万人次参观。自从在1976年落成后，该塔一直被吉尼斯世界纪录大全纪录为最高的建筑物，直至被哈里发塔超越为止。但从专业角度看，加拿大国家电视塔并不是一个建筑物，而是一个非建筑结构物。1995年，加拿大国家电视塔被美国土木工程协会（American Society of Civil Engineers）收入现代世界七大奇迹。同时是世界高塔联盟（World Federation of Great Towers）的成员之一。第二年，吉尼斯世界纪录将加拿大国家电视塔的分类更改为“世界最高的建筑”和“世界最高的自立建筑”。2007年9月12日，哈里发塔以553.4米的高度超越加拿大国家电视塔成为世界最高的自立建筑；至2010年6月，整体高度达到600米的广州塔竣工，取代加拿大国家电视塔成为世界第一高塔。<p>
+<k>Niagara Falls </k><p>尼亚加拉瀑布是由三座位于北美洲五大湖区尼亚加拉河上瀑布的总称，平均流量2,407立方米/秒，与伊瓜苏瀑布、维多利亚瀑布并称为世界三大跨国瀑布。尼亚加拉瀑布以美丽的景色，巨大的水利发电能力和极具挑战性的环境保护工程而闻名于世，是非常受游客欢迎的旅游景点。<p>
+<k>Royal Ontario Museum</k><p> 皇家安大略博物馆位于多伦多市中心，是北美洲第5大博物馆和加拿大最大的世界文化和自然历史博物馆，每年吸引近100万参观者。博物馆拥有的超过六百万件藏品和40个展馆一定程度上为其赢得了国际声誉。博物馆收藏展品包括恐龙、矿物和陨石、近东及非洲艺术品、东亚艺术品、欧洲历史、加拿大历史、文化等。博物馆还拥有世界最大的来自伯吉斯页岩的化石群收藏，包括了超过150,000个样本。</p>
+
+
+
+
+</div><!-- #wrapper -->
+</body>
+</html>

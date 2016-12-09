@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="img/Falls.jpg" width="960" height="500" alt=""/></div>
+					<div class="data">
+						<h4>气势磅礴的尼加拉瓜大瀑布</h4>
+						
+				  </div></div>
+                  <div class="slideshow_item">
+					<div class="image"><img src="img/WestPoint.jpg" width="1000" height="666" alt=""/></div>
+					<div class="data">
+						<h4>" 美国将军的摇篮 "-西点军校</h4>
+						
+				  </div></div>
+            <div class="slideshow_item">
+					<div class="image"><img src="../img/capitol_building.jpg"></div>
+					<div class="data">
+						<h4>United&nbsp;States&nbsp;Capitol&nbsp;-&nbsp;美国国会大厦</h4>
+						
+
+				  </div>
+				</div>
+								
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/Lincoln_Memorial.jpg"></div>
+					<div class="data">
+						<h4>Lincoln&nbsp; Memorial&nbsp;-&nbsp;林肯纪念堂</h4>
+						
+				  </div>
+
+				</div>
+                <div class="slideshow_item">
+					<div class="image"><img src="../img/pic1.jpg" width="1920" height="1200"></div>
+					<div class="data">
+						<h4>世界上第五高的自立式建筑物 &nbsp;- &nbsp;CN Tower 加拿大国家电视塔</h4>
+						
+
+				  </div>
+				</div>
+
+<
+              <div class="slideshow_item">
+					<div class="image"><img src="../img/OldQuebec.jpg" width="2000" height="1313"></div>
+					<div class="data">
+						<h4>Old Quebec&nbsp;-&nbsp;魁北克历史城区</h4>
+					</div>
+		  </div>
+                  
+
+	  </div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>9天团</h1><h1>（美加东[纽约-费城-华盛顿华盛顿-康宁-尼加拉瀑布夜游</h1>
+<h1>-多伦多-千岛湖-渥太华-满地可-魁北克-波士顿]豪华游）</h1>
+<k>第一天：出发地-纽约市-夜游 </k><p>
+原居地飞往纽约市.深入游览市民生活区-法拉盛唐人街(小台北和韩国城)，了解纽约移民的生活状况。并选购高性价比的手信礼品，包括花旗参，美国果仁特产，保健品，Zippo打火机，名牌香水，化妆品，手表，饰品等，还有名牌折扣商场，电子产品大卖场, macy,best buy等百货商场。并在食街享受地道各国风味美食，下午送往酒店休息。EWR离酒店较近，接机后回酒店休息，没有特色游，可以自费（$10/人）到Jersey Gardens Outlet Mall购物。</p>
+<k>第二天：客人可以选择其中一个行程：</k><p> 
+<i>选择A</i>：名牌购物中心-西点军校-纽约夜游 </p>
+<p>早上前往WoodburyOutlets－全美最大、最新原厂直销的奥特莱斯名牌购物商场，共有200多间商店，Tod’s、Gucci、Fendi、Burberry、Gap、Outlet、GiorgioArmani、 J.Crew、Chanel、Jimmy Choo 、Lacoste、Neiman Marcus Last Call、 Polo Ralph Lauren、Prada、Saks Fifth Avenue Off 5th等，打折超过50％以上。 ‘美国将军的摇篮’-西点军校，兵家必争之地,颇有“一夫当关，万夫莫开”之势。名将格兰特、罗伯特·李、艾森豪威尔、巴顿、麦克阿瑟、布莱德利等均是该校的毕业生。</p>
+<p><i>选择B</i>：纽约自由行</p>
+<p>没有导游和团队的束博，自由自在的游览纽约。可深入感受纽约地铁，参观哥伦比亚大学，林肯中心，欣赏百老汇舞台剧（自行订票），自然历史博物馆，欣赏唐伯虎真迹《霜林白虎图》，苏豪区感受纽约艺术气氛，内进纽约証交所（提前自行网上预约），中央火车站，着名餐厅品尝纽约特色牛排，乘坐直升机游览纽约等。</p>
+<p><i>选择C</i>：纽约-大西洋赌城-纽约（赌场条例规定，限21岁以上）</p>
+<p>早上，乘坐赌场提供的专车直到大西洋城后,自由活动，可漫步在海滩，欣赏海天一线的美景。参观富丽堂皇的赌场，小试身手。傍晚回到纽约唐人街,集中后送回酒店休息。</p>
+<k>第三天：纽约市观光（全天）</k><p>
+上到纽约市地标-帝国大厦嘹望观景台，欣赏中央公园和纽约。乘坐观光环岛游轮游览哈德逊河，与自由女神像和布鲁克林桥摄影留念。登上花费1.2亿美元重新整修开放的国家历史文物-大无畏号航空母舰，并参观协和号超音速客机和各种战机。漫步世界金融、証券交易中心华尔街，三一教堂，象征牛市的铜牛雕塑和纽约股票交易所留影。参观大都会博物馆，时代广场，杜莎夫人蜡像馆与总统奥巴马等名人合影。途径第五大道，洛克菲勒中心，联合国总部，世贸遗址和建设中的新世贸-自由之塔等。</p>
+<k>第四天 纽约-费城-华盛顿 </k><p>
+参观国家诞生地“费城”，漫步在独立公园，在想象中感受1776年在此宣读独立宣言时的振奋心情。与美国国父-华盛顿雕像，旧国会大厦和独立宫合影留念，参观自由钟或者自由活动。华盛顿特区，参观林肯纪念堂和倒影湖，越战纪念碑，朝鲜战争纪念碑,航天航空博物馆，了解人类征服天空和太空的伟大历程以及对未来的展望等。并与美国总统府-白宫和最高权力机构-国会大厦合影留念，乘坐游船沿着波多马克河和太斗湖饱览首都美景。途经杰弗逊总统纪念堂，华盛顿纪念碑，二战纪念碑，美国印钞厂等。</p>
+<k>第五天 :华盛顿-康宁-尼加拉瀑布夜游</k><p> 
+前往世界500强企业的总部-康宁玻璃中心，参观全球最大的玻璃收藏博物馆，欣赏现场制作玻璃表演技术。午餐后，参观尼加拉瓜大瀑布，游览瀑布国家公园，眺望「美国瀑布」，「马蹄瀑布」及「新娘面纱瀑布」。水势一泻千里，雷霆万钧，亲身体验那份磅礡的气势，尤如万马奔腾。搭乘着名的“雾中少女”号游船（冬季关闭）穿梭于波涛起伏的瀑布间，水花迎面扑来，刺激紧张，更添加一份震撼力。回到访客中心观看Imax电影，投资1千五百万的电影向您描述了尼加拉瀑布多姿多彩的传奇故事.夜景结束后，返回酒店休息。（受日落时间及交通规定的约束，观赏夜景的完整性在某些夏夜会受到限制）。</p>
+<k>第六天：尼加拉瀑布-多伦多 (加拿大)</k><p>
+上午继续游览尼加拉瀑布，车子经过象征美国及加拿大两国坚固友谊的“彩虹桥”，进入加拿大，看完Imax电影，上到观瀑塔，在顶楼的旋转餐厅享受浪漫西餐后，来到观景台从高空观赏瀑布。下午抵达加拿大第一大城及金融中心多伦多市，参观CN塔,登上高塔俯瞰市景及一望无际的安大略湖，随后前往维多利亚式建筑的省议会大厦，庄严肃穆﹔呈两个半圆形设计的市政大厦-天眼，造形新颖奇特，亦是游览的重点。乘船游览安大略湖（夏季），欣赏多伦多市和丽景湾湖中的小岛。参观国家文化遗产-西班牙式古堡Casa Lomas（冬季），晚上于北美第三大唐人街用餐。</p>
+<k>第七天：多伦多-千岛湖-渥太华-满地可 </k><p>
+早晨出发前往千岛。千岛位于美国和加拿大之间，分布着1864个独立的岛屿，乘船游览千岛湖(冬季关闭)。随后前往渥太华，是着名的政治和商业都市，参观敬穆肃立的阵亡将士纪念碑，气派非凡的加拿大国会大厦和高度达295尺的自由钟塔，永不熄灭的和平火种。北上前往加拿大东部最大的法语城市，最具法国文化，素有“北美小巴黎”之称的蒙特利尔市。停留在奥林匹克体育馆，参观45度倾斜的斜塔，己成为蒙特利尔的一个象征。随后，漫步于旧城区，那石造的古色古香的建筑、完全是欧洲风味，造型典雅的建筑都别有情致，不愧为加拿大的文化重镇。建于1829年的圣母大教堂，与巴黎的圣母院教堂为姊妹篇，金碧辉煌的装饰与收藏众多艺术品而成为北美最受瞩目的教堂建筑之一。最后来到唐人街，晚餐后，回酒店。</p>
+<k>第八天：满地可-魁北克-波士顿 </k><p>
+前往充满法国情怀的城市-魁北克，英法对照的路标和招牌随处可见，路上行人穿着打扮也深具欧洲风格，露天咖啡座，浪漫温馨，鹅卵石步行街，购买艺术品，法皇路易斯广场，仿若到了巴黎。还参观古城墙，皇家军事古堡-星形要塞和圣劳伦斯河的咽喉之位，居高临下，既险要，又优美平静。与地标建筑-芳堤娜城堡酒店合影，国会大厦和品尝特式地道法国餐。停留免税店，过境后，前往美国历史文化之都-波士顿，享受极富盛名的新鲜龙虾大餐。</p>
+<k>第九天：波士顿-家园/纽约</k><p>
+参观哈佛大学最古老的校园区，与闻名世界的谎言雕像－哈佛雕像合影留念。麻省理工大学主教学楼合影。波士顿市区观光，在古老的三一大教堂和汉考克摩天大楼合影，途径波士顿公园、天鹅湖公园、普天寿大楼，波士顿图书馆，金色圆顶的州议会大楼。乘坐波士顿海港游船，尽情游览波士顿港湾。漫步于昆西市场，感受波士顿古老的文化遗产，选购各种商品和纪念品，品尝各种地道美食，在导游的介绍下，当然不能够错过着名的波士顿蛤蜊汤。</p>
+
+
+
+
+</div>
+</body>
+</html>

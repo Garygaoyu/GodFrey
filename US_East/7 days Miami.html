@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+ <link href="../css/floatmenu.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <<div class="slideshow_item">
+					<div class="image"><img src="../US_East/img/disneyland.jpg" width="900" height="360" alt=""/></div>
+					<div class="data">
+						<h4>Disneyland&nbsp;-&nbsp;迪士尼乐园</h4>
+						
+					</div>
+				</div>
+				
+			
+				<div class="slideshow_item">
+					<div class="image"><img src="img/Westkey.JPG" width="450" height="292" alt=""/></div>
+					<div class="data">
+						<h4>West Key Island&nbsp;-&nbsp;西锁岛</h4>
+						
+
+				  </div>
+		  </div>
+								
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="img/MiamiNationalPark.jpg" width="600" height="400" alt=""/></div>
+					<div class="data">
+						<h4>迈阿密国家沼泽公园</h4>
+					</div>
+		  </div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>7天团 （迈阿密-奥兰多）</h1>
+<h3>迈阿密，奥兰多七天游 （门票根据您的选择即时购买）</h3>
+<k>第一天：原居地/抵达迈阿密</k><p>
+由原居地飞往迈阿密，导游在机场行李提取处等候，送往酒店休息。早班飞机客人，可选择前往海豚名牌购物中心*采购心爱礼品。</p>
+<k>第二天：沼泽公园/市区观光 </k><p>
+上午前往迈阿密国家沼泽公园，乘“草上飞”风力船*穿梭在鳄鱼密布的沼泽河流，带您领略全新的惊险刺激之旅。下午欣赏迈阿密清澈见底的海滩与景色秀丽的风光。参观号称美国南部第一街的南海滩酒吧街，欣赏色彩斑斓的西班牙建筑和着名的意大利服装设计师凡萨其的故居。乘坐水上观光船*,游览迈阿密海湾，欣赏海天一色的美景。</p>
+<k>第三天： 西锁岛 </k><p>
+从迈阿密至西锁岛共170英里，沿途要经过32个岛，42座桥。历时八年完成的着名七里长桥（七哩桥）极其宏伟壮观，被称为世界第八大奇迹。前任加州州长阿诺主演的“真实的谎言”即在此拍摄，沿途的南国风光美不胜收。在西锁岛，您可以领略到全美最南端古老海港小镇的迷人风光：漫步西锁岛最大的游船码头，万吨豪华游轮经常停靠于此。也可走访硬汉文豪“海明威故居*”,或漫步餐馆、酒吧林立、游客如织的多幅街，并可在全美最南端的地标前拍照留恋。回程时，可欣赏到壮丽的日落。</p>
+<k>第四天：罗德岱堡/奥兰多 </k><p>
+上午前往距离迈阿密30英里的罗德岱堡游览人造“威尼斯”欣赏两岸的豪宅和河道上林立的桅墙，其中有首富比尔盖茨及美国花旗银行总裁的豪宅。下午将由专人送往奥兰多，傍晚时分入住酒店。</p>
+<k>第五天： 迪斯尼-明日世界/或九大主题公园任选其一</k><p>
+明日世界乐园由未来世界和万国博物馆两个部分组成。未来世界像人们展示了人类文明发展、能源形成、海底世界、太空探索等，其项目是先进的声光和电子科技的完美结合,令人尽情感受惊险刺激和无穷创意。万国博物馆由 中国在内的十一个国家主题馆组成，每个国家馆都以自己独特的建筑、音乐、美食屹立一方展示着自己独有的文化。从挪威海盗、意大利通心粉、日本天守阁、摩洛 哥卡萨布兰卡到美国议会大厦、中国祈年殿等，每一个景点都让您充满惊喜。夜幕降临后，更有盛大的烟火表演期待您的光临。</p>
+<k>第六天：迪斯尼-魔术王国/或九大主题公园任选其一Orlando Park</k><p style="text-align:center;"> (Chose 1 park from 9 Orlando theme park)<p>
+魔术王国的主题是童话和梦幻，它由明日世界，幻想世界，拓荒世界，自由广场，探险世界五大部分组成，分别在灰姑娘城堡前的美国小镇大街依次排开。会让您整天都感觉紧张和剌激的迪士尼米老鼠乐园，鲁宾森树屋，海盗金银岛，非洲探险，恐怖鬼屋，太空飞车，彩灯卡通动物大游行等等，给您带去非同一般的梦幻感受。</p>
+<k>第七天：送机 </k>
+
+
+
+
+</div>
+</body>
+</html>

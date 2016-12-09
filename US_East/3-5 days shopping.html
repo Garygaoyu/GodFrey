@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GodFrey 高飛</title>
+
+<link rel="stylesheet" href="../Vancouver package/css/slideshows.css" />
+<link rel="stylesheet" href="../Vancouver package/css/content.css" />
+<script src="../Vancouver package/js/jquery.min.js"></script>
+<script src="../Vancouver package/js/jquery.cycle.all.js"></script>
+
+<script src="../Vancouver package/js/jquery.easing.1.3.js"></script>
+
+<script>
+$(function() {
+	    $('#slideshow_2').cycle({
+        fx: 'fade',		
+		speed:  900, 
+		timeout: 5000, 
+		pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+				$('.ss2_wrapper .slideshow_box .data').html(data);
+			});
+			$('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+		}
+    });
+
+	$('.ss2_wrapper').mouseenter(function(){
+		$('#slideshow_2').cycle('pause');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+		$('#slideshow_2').cycle('resume');
+		$('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+		$('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+	
+
+
+
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); // for this demo disable all links that point to "#"
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+<div id="wrapper" align="center">
+
+<section id="main">
+
+	<div id="content">
+	
+		
+		
+		
+		
+		
+		<div class="ss2_wrapper">
+		
+			<a href="#" class="slideshow_prev"><span>Previous</span></a>
+			<a href="#" class="slideshow_next"><span>Next</span></a>
+				
+			<div class="slideshow_paging"></div>
+			
+			<div class="slideshow_box">
+
+				<div class="data"></div>
+			</div>
+			
+			<div id="slideshow_2" class="slideshow">
+            <div class="slideshow_item">
+					<div class="image"><img src="../img/Lincoln_Memorial.jpg"></div>
+					<div class="data">
+						<h4>Lincoln&nbsp; Memorial&nbsp;-&nbsp;林肯纪念堂</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/WTMounment.jpg"></div>
+					<div class="data">
+						<h4>美国华府的地标&nbsp;-&nbsp;Washington&nbsp;Monument&nbsp;&nbsp;华盛顿纪念碑</h4>
+						
+				  </div>
+								
+				
+				<div class="slideshow_item">
+					<div class="image"><img src="../img/centralpark.png"></div>
+					<div class="data">
+						<h4>Central&nbsp;Park&nbsp;-&nbsp;中央公园</h4>
+						
+				  </div>
+
+				</div>
+<div class="slideshow_item">
+					<div class="image"><img src="../img/empire-state-building.jpg"></div>
+					<div class="data">
+						<h4>Empire&nbsp;State&nbsp;Building&nbsp;-&nbsp;帝国大厦</h4>
+						
+				  </div>
+
+			  </div>
+
+</section>
+
+
+<footer>
+	
+</footer>
+</div>
+<div id="information">
+<h1>3/5天团（美东[纽约-费城-华盛顿]精华游+购物。）</h1>
+<k>第一天：出发地-纽约市（送半天特色游）-夜游</k><p>
+原居地飞往纽约市，深入游览市民生活区-法拉盛唐人街(小台北和韩国城)，了解纽约移民的生活状况。并选购高性价比的手信礼品，包括花旗参，美国果仁特产，保健品，Zippo打火机，名牌香水，化妆品，手表，饰品等，还有名牌折扣商场，电子产品大卖场,macy,best buy等百货商场。并在食街享受地道各国风味美食，下午送往酒店休息。EWR离酒店较近，接机后回酒店休息，没有特色游，可以自费（$10/人）到Jersey Gardens Outlet Mall购物（独家）。5PM前到达，晚上自费夜游$25/人( 不含门票)</p>
+<k>第二天：客人可以选择其中一个行程：</k><p>
+<i>选择A</i>：名牌购物中心-西点军校(100mile)</p>
+<p>早上前往WoodburyOutlets－全美最大、最新的奥特莱斯名牌购物商场，共有200多间世界名牌商店，Gucci、Fendi、Armani, Chanel, Polo, Prada,等，打折超过50％以上。‘美国将军的摇篮’-西点军校，兵家必争之地,颇有“一夫当关，万夫莫开”之势。名将格兰特、罗伯特·李、艾森豪威尔、巴顿等均是该校的毕业生。</p>
+<p><i>选择B</i>：纽约自由行或者公务活动</p>
+<p>没有导游和团队的束博，自由自在的游览纽约。可深入感受纽约地
+铁，参观哥大，林肯中心，百老汇舞台剧（自行订票），自然历史博物馆，欣赏唐伯虎真迹《霜林白虎图》，苏豪区感受纽约艺术气氛，内进纽约証交所（提前自行网上预约），中央火车站，着名餐厅品尝纽约特色牛排等。或者探亲访友，公务活动。</p>
+<k>第三天：纽约市观光（全天）-家园 20 mile </k><p>（纽约市观光 (全天-酒店)（5天团继续）上到纽约市地标-帝国大厦嘹望观景台，欣赏中央公园和纽约。乘坐观光环岛游轮游览哈德逊河，与自由女神像和布鲁克林桥摄影留念。登上花费1.2亿美元重新整修开放的国家历史文物-大无畏号航空母舰，并参观协和号超音速客机和各种战机。漫步世界金融、証券交易中心华尔街，三一教堂，象征牛市的铜牛雕塑和纽约股票交易所留影。参观大都会博物馆，时代广场，杜莎夫人蜡像馆与总统奥巴马等名人合影。途径第五大道，洛克菲勒中心，联合国总部，世贸遗址和建设中的新世贸-自由之塔等。</p>
+<k>（3天团结束)</k>
+<k>第四天：普林斯顿大学-纽约-费城-首都华盛顿 220 Miles</k><p>
+<p>早晨，前往参观普林斯顿大学，是美国一所着名的私人研究型大学，八所长青藤大学之一。由专门的学子带着我们体验美国的教育文化。之后前往美国诞生地-费城参观宣读独立宣言的临时国都。独立宫、自由锺、旧国会大厦、国家独立公园均将呈现在您的眼前。前往白宫，在白宫外拍照留念后，继而前往杰佛逊纪念堂，林肯纪念堂，越战纪念碑，韩战纪念广场。并乘坐豪华观光游轮沿着波多马克河和太斗湖饱览 首都美景，从不同角度欣赏华盛顿首都。</p>
+<k>第五天：华盛顿-纽约/家园 </k><p>
+<p>早上游览国会山庄，始建于1793年，后来随着美国州数与议员数的增加，国会大厦也大幅扩建。国家大草坪，一直从林肯纪念堂延伸到国会大厦，这里美国国家庆典和仪式的首选，同时也是美国历史上重大示威游行、民权演说的重要场地。参观史密斯国家博物馆群，自由免费参观航天航空博物馆等，以收藏史上知名的航空航天实物着称，其数量之多也堪称世界之最。傍晚回到纽约。</p>
+
+
+
+</div>
+</body>
+</html>
